@@ -1,7 +1,7 @@
 {
-  "name": "@brother.bet/web",
+  "name": "@platiot/web",
   "version": "1.0.0",
-  "description": "Brother Bet Web",
+  "description": "Firmware Versioning System",
   "private": "true",
   "main": "./src/index.js",
   "scripts": {
