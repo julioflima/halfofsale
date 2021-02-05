@@ -1,1 +1,0 @@
-{"ast":null,"code":"","map":{"version":3,"sources":[],"names":[],"mappings":"","sourcesContent":["export interface IButton {\n  onClick: void\n  animate: boolean\n}\n\ninterface IImageZeroRisk {\n  language: string\n}\n"]},"metadata":{},"sourceType":"script"}
