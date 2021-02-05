@@ -1,18 +1,17 @@
 {
-  "name": "brother.bet",
+  "name": "platiot",
   "version": "2.0.0",
   "main": "index.js",
-  "repository": "https://github.com/juloko/brother.bet.git",
-  "author": "juloko",
+  "repository": "https://github.com/juliofliam/Platiot.git",
+  "author": "Julio Lima",
   "workspaces": {
     "packages": [
       "packages/*",
-      "packages/firebase/*",
       "packages/shared/*"
     ]
   },
   "devDependencies": {
-    "@brother.bet/eslint-config": "*",
+    "@platiot/eslint-config": "*",
     "@types/node": "^14.14.20",
     "@types/react": "^17.0.0",
     "nodemon": "^2.0.4",
