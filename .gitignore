@@ -28,6 +28,8 @@ firebase-debug.*.log*
 **/.firebase/
 
 # Dependency directories
+**/packages/web/node_modules
+**/packages/web/.vercel
 **/node_modules/**
 node_modules/.bin
 node_modules/*
