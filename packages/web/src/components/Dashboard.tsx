@@ -5,7 +5,7 @@ import useTranslation from '../hooks/useTranslation'
 
 import {} from '../../styles/components/Dashboard'
 
-export const Background = (props) => {
+export const Dashboard = (props) => {
   const { children } = props
 
   const { t } = useTranslation()
