@@ -1,23 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { IImageZeroRisk } from '../../src/interfaces/pages/Landing'
-
-import logo from '../../src/assets/tiny/logo.png'
-import arrows from '../../src/assets/tiny/arrows.png'
-import data from '../../src/assets/tiny/data.png'
-import player from '../../src/assets/tiny/player.png'
-import goal from '../../src/assets/tiny/goal.png'
-import money from '../../src/assets/tiny/money.jpg'
-import playerKick from '../../src/assets/tiny/player_kick.jpg'
-import fieldPurple from '../../src/assets/tiny/field-purple.jpg'
-import zeroRisk from '../../src/assets/tiny/zero-risk.png'
-import zeroRisco from '../../src/assets/tiny/zero-risco.png'
-
-import { ReactComponent as Bet365White } from '../../src/assets/svg/bet365-white.svg'
-import { ReactComponent as FifaWhite } from '../../src/assets/svg/fifa-white.svg'
-import { ReactComponent as Barcode } from '../../src/assets/svg/barcode3.svg'
-
 import { FiChevronsDown, FiPlus } from 'react-icons/fi'
 
 import { slideBottom } from '../animations'
@@ -42,12 +25,6 @@ export const TextPink = styled.span`
 export const TextPurple = styled.span`
   color: ${(props) => props.theme.colors.secondary.two};
 `
-export const TextBlack = styled.span`
-  color: ${(props) => props.theme.colors.background.primary.four};
-`
-export const TextGray = styled.span`
-  color: ${(props) => props.theme.colors.background.secondary.two};
-`
 
 export const Container = styled.div`
   width: 100vw;
@@ -56,14 +33,12 @@ export const Container = styled.div`
   align-items: center;
   h1 {
     font-size: 54px;
-    color: ${(props) => props.theme.colors.one};
     margin-top: 40px;
   }
   p {
     margin-top: 24px;
     font-size: 24px;
     line-height: 32px;
-    color: ${(props) => props.theme.colors.one};
   }
   border-radius: 0 0 2rem 2rem;
   height: calc(100vh - ${(props) => props.theme.navigation.height});
@@ -76,30 +51,22 @@ export const ContainerImages = styled.div`
   margin: 1rem 0;
 `
 
-export const Logo = styled.img.attrs({
-  src: `${logo}`,
-})`
+export const Logo = styled.img.attrs({})`
   width: 400px;
   height: 350px;
 `
 
 export const ContainerAbout = styled.div`
-  background-image: url(${data});
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
 `
 
-export const ContainerMoney = styled(ContainerAbout)`
-  background-image: url(${money});
-`
+export const ContainerMoney = styled(ContainerAbout)``
 
-export const ContainerCTA = styled(ContainerAbout)`
-  background-image: url(${playerKick});
-`
+export const ContainerCTA = styled(ContainerAbout)``
 export const ContainerBuy = styled(ContainerAbout)`
-  background-image: url(${fieldPurple});
   background-size: auto fit-content;
   background-position: center;
 `
@@ -178,7 +145,6 @@ export const ContainerParagraphIncrease = styled.div`
 `
 export const Table = styled.table`
   border-radius: 0.7rem;
-  border: 1px solid ${(props) => props.theme.colors.background.secondary.one + '80'};
   padding: 0.2rem 0.5rem;
   margin-bottom: 1rem;
 
@@ -193,7 +159,6 @@ export const Table = styled.table`
   }
 
   & tr td:nth-child(2) {
-    color: ${(props) => props.theme.colors.background.secondary.two};
     text-align: center;
     padding: 0 0.5rem;
   }
@@ -219,7 +184,6 @@ export const Paragraph = styled.div`
 export const ParagraphCard = styled.h4`
   align-self: center;
   font-family: 'Work Sans', Courier, monospace;
-  color: ${(props) => props.theme.colors.background.primary.one};
   text-align: left;
   margin-bottom: 1rem;
   width: 100%;
@@ -233,7 +197,6 @@ export const ParagraphCardSub = styled(ParagraphCard)`
   line-height: 2rem;
   font-size: 0.65em;
   line-height: 0.7rem;
-  color: ${(props) => props.theme.colors.background.secondary.two};
   padding-left: 0.6rem;
 `
 
@@ -355,7 +318,6 @@ export const ButtonFree = styled.div`
   font-weight: 600;
   font-size: 1.1rem;
   color: #fff;
-  background: ${(props) => props.theme.colors.background.secondary.one};
   height: 1.7rem;
   display: flex;
   flex-direction: column;
@@ -393,7 +355,6 @@ export const OverlayDark = styled.div`
   position: absolute;
   opacity: 0.92;
   z-index: 1;
-  background-color: ${(props) => props.theme.colors.background.primary.four};
 `
 
 export const OverlayGrey = styled.div`
@@ -403,7 +364,6 @@ export const OverlayGrey = styled.div`
   position: absolute;
   opacity: 0.85;
   z-index: 1;
-  background-color: ${(props) => props.theme.colors.background.primary.four};
 `
 
 export const OverlayLight = styled.div`
@@ -416,7 +376,7 @@ export const OverlayLight = styled.div`
   background-color: ${(props) => props.theme.colors.primary.four};
 `
 
-export const ImageBet365White = styled(Bet365White)`
+export const ImageBet365White = styled.div`
   height: auto;
   width: 5rem;
   display: inline-block;
@@ -424,7 +384,7 @@ export const ImageBet365White = styled(Bet365White)`
   z-index: 5;
 `
 
-export const ImageFifaWhite = styled(FifaWhite)`
+export const ImageFifaWhite = styled.div`
   height: auto;
   width: 7rem;
   display: inline-block;
@@ -432,7 +392,7 @@ export const ImageFifaWhite = styled(FifaWhite)`
   z-index: 5;
 `
 
-export const ImageBarcode = styled(Barcode)`
+export const ImageBarcode = styled.div`
   height: 3rem;
   width: auto;
   display: inline-block;
@@ -462,7 +422,6 @@ export const ImagePlusParagraphFree = styled(ImagePlus)`
   font-size: 0.8rem;
   top: 0.1rem;
   margin-right: 0.5rem;
-  color: ${(props) => props.theme.colors.background.primary.two};
 `
 
 export const ImagePlusParagraph = styled(ImagePlusParagraphFree)`
@@ -474,9 +433,7 @@ export const ImagePlusParagraphSub = styled(ImagePlusParagraphFree)`
   font-size: 0.6rem;
 `
 
-export const ImageArrows = styled.img.attrs({
-  src: arrows,
-})`
+export const ImageArrows = styled.img.attrs({})`
   display: flex;
   align-self: initial;
   width: 150%;
@@ -491,9 +448,7 @@ export const ImageArrows = styled.img.attrs({
   z-index: 2;
 `
 
-export const ImageGoal = styled.img.attrs({
-  src: goal,
-})`
+export const ImageGoal = styled.img`
   opacity: 0.5;
   display: flex;
   align-self: initial;
@@ -508,9 +463,7 @@ export const ImageGoal = styled.img.attrs({
   z-index: 2;
 `
 
-export const ImagePlayer = styled.img.attrs({
-  src: player,
-})`
+export const ImagePlayer = styled.img`
   display: flex;
   align-self: initial;
   width: 100%;
@@ -524,17 +477,3 @@ export const ImagePlayer = styled.img.attrs({
   z-index: 2;
   opacity: 0.6;
 `
-
-export const ImageZeroRisk = styled.img.attrs<IImageZeroRisk>((props) => ({
-  src: props.language === 'en' ? zeroRisk : zeroRisco,
-}))`
-  width: 5rem;
-  height: auto;
-  background-repeat: no-repeat;
-  object-fit: cover;
-  z-index: 4;
-  position: absolute;
-  left: 25vw;
-  bottom: 1.5rem;
-  transform: rotate(20deg);
-` as React.FC<IImageZeroRisk>

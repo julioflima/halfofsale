@@ -8,7 +8,7 @@ import Document, {
 } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
-import brotherbetLogo from '../assets/tiny/favicon.png'
+import favicon from '../assets/tiny/favicon.png'
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<DocumentInitialProps> {
@@ -50,7 +50,7 @@ export default class MyDocument extends Document {
 
           <link href="http://tilomitra.github.io/infinite/infinite.css" rel="stylesheet" />
 
-          <link rel="icon" href={brotherbetLogo} />
+          <link rel="icon" href={favicon} />
         </Head>
         <body>
           <Main />

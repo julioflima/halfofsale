@@ -1,30 +1,14 @@
 const theme = {
   colors: {
-    one: '#00D58F',
-    primary: { one: '#00D58F', two: '#50FA7B', three: '#1BF852', four: '#00FF0A' },
+    primary: { one: '#FB6C02', two: '#FB6C02', three: '#FB6C02', four: '#FB6C02' },
 
-    secondary: { one: '#BDB1F7', two: '#9783FC', three: '#6547FF', four: '#502EFC' },
+    secondary: { one: '#FFD600', two: '#FFD600', three: '#FFD600', four: '#FFD600' },
 
-    tertiary: { one: '#EEFA2D', two: '#FFF500', three: '#FFE14B', four: '#FFD60A' },
+    tertiary: { one: '#011627', two: '#011627', three: '#011627', four: '#011627' },
 
-    quaternary: { one: '#F8C1DC', two: '#FF80BF', three: '#EC5D8D', four: '#F5447F' },
+    quaternary: { one: '#0A8B9C', two: '#0A8B9C', three: '#0A8B9C', four: '#0A8B9C' },
 
     quinary: { one: '#64D2FF', two: '#0AB5FF', three: '#0A84FF', four: '#006AD6' },
-
-    background: {
-      primary: {
-        one: '#48484A',
-        two: '#3A3A3C',
-        three: '#2C2C2E',
-        four: '#1C1C1E',
-      },
-      secondary: {
-        one: '#D4D4D7',
-        two: '#ADADAD',
-        three: '#8E8E93',
-        four: '#636366',
-      },
-    },
   },
   navigation: {
     height: '4rem',

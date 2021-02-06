@@ -19,6 +19,7 @@ export const ContainerTab = styled.span`
 `
 
 export const TabBar = styled(Tab)`
+  color: red;
   width: 100%;
 `
 
@@ -35,7 +36,7 @@ export const ContainerVirtualButtons = styled.span`
   flex-direction: row;
   justify-content: space-around;
   padding: 0 1rem;
-  color: ${(props) => props.theme.colors.background.secondary.two} !important;
+  color: ${(props) => props.theme.colors.tertiary.one + '66'} !important;
 `
 
 export const Button = styled.span<IButton>`
@@ -60,7 +61,8 @@ export const Button = styled.span<IButton>`
   background: ${(props) =>
     props.animate
       ? css`
-          linear-gradient(00deg, #50fa7b 0%, #00d58f 100%);
+          linear-gradient(225deg, ${(props) => props.theme.colors.primary.one} 0%, ${(props) =>
+          props.theme.colors.secondary.one}  100%);
         `
       : ''};
   transform: rotate(-135deg);
