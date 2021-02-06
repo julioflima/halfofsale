@@ -5,33 +5,39 @@ import useTranslation from '../hooks/useTranslation'
 
 import {
   Container,
+  ContainerMain,
   ContainerFooter,
   ContainerLogo,
   ImageIA,
   ImagePlatiot,
-  ImageWave,
+  ImageWaveDarkBlue,
+  ImageWaveLightBlue,
+  ImageWaveWhite,
   Slogan,
 } from '../../styles/components/Background'
 
-export const Background = () => {
+export const Background = (props) => {
+  const { children } = props
+
   const { t } = useTranslation()
-  const presentation = t('presentation')
-  const brasti = t('brasti')
-  const corona = t('corona')
+  const slogan = t('slogan')
 
   return (
-    <>
-      <Container>
+    <Container>
+      <Head>Platior</Head>
+      <ContainerMain>
         <ContainerLogo>
           <ImagePlatiot />
-          <Slogan>
-            {presentation.slogan}
-            {corona.slogan}
-          </Slogan>
+          <Slogan>{slogan}</Slogan>
           <ImageIA />
         </ContainerLogo>
-        <ContainerFooter>{/* <ImageWave /> */}</ContainerFooter>
-      </Container>
-    </>
+      </ContainerMain>
+      {children}
+      <ContainerFooter>
+        <ImageWaveDarkBlue />
+        <ImageWaveWhite />
+        <ImageWaveLightBlue />
+      </ContainerFooter>
+    </Container>
   )
 }

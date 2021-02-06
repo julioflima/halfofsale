@@ -63,3 +63,7 @@ export const slideBottom = keyframes`
     transform: translateY(1rem);
   }
 `
+export const waving = (variation) => keyframes`
+   0% { transform:translatex(0%) }
+  25% { transform:translatex(${variation}) }
+`

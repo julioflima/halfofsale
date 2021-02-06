@@ -14,7 +14,7 @@ const IndexPage: NextPage<{
 )
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-  const localization = getLocalizationProps(ctx, 'landing')
+  const localization = getLocalizationProps(ctx, 'common')
   return {
     props: {
       localization,

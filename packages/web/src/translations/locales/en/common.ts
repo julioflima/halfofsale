@@ -1,8 +1,5 @@
 const common = {
-  corona: {
-    slogan: 'decision based on data',
-    sub_slogan: 'Your tips more acertives.',
-  },
+  slogan: 'Firmware Versioning System.',
 }
 
 export default common

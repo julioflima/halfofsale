@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 import marine from '../../src/assets/tiny/marine.jpg'
+import { waving } from '../animations'
 
 import { ReactComponent as Platiot } from '../../src/assets/svg/platiot.svg'
-import { ReactComponent as Wave } from '../../src/assets/svg/wave.svg'
-import { ReactComponent as IA } from '../../src/assets/svg/ia.svg'
+import { ReactComponent as Wave } from '../../src/assets/svg/wavies.svg'
+import { ReactComponent as IA } from '../../src/assets/svg/iaa.svg'
 
 export const ImageMarine = styled.div`
   background-image: url(${marine});
@@ -16,48 +17,87 @@ export const ImageMarine = styled.div`
   height: 100vh;
 `
 
-export const Container = styled(ImageMarine)`
+export const Container = styled.div`
   width: 100vw;
-  height: 100vh;
+  overflow: hidden;
+`
+
+export const ContainerMain = styled(ImageMarine)`
+  width: 100vw;
   display: flex;
   flex-direction: row;
 `
 
-export const ContainerFooter = styled.div`
-  width: 100vw;
-  display: absolute;
-  border: 0;
-  z-index: 9999;
-`
-
 export const ContainerLogo = styled.div`
-  width: 50vw;
-  height: 100vh;
+  width: 50%;
   display: flex;
   flex-direction: column;
   align-items: center;
 `
 
 export const Slogan = styled.h1`
+  margin-top: 1rem;
   color: white;
-  font-size: 2rem;
+  font-size: 1rem;
   height: auto;
-  width: 10rem;
+  width: fit-content;
+  font-weight: 100;
 `
 
 export const ImagePlatiot = styled(Platiot)`
   height: auto;
-  width: 10rem;
+  width: 35vw;
   z-index: 5;
+  margin-top: 20%;
 `
-export const ImageWave = styled(Wave)`
+
+export const ContainerFooter = styled.div`
+  width: 100vw;
+  height: 0;
+  position: fixed;
+  border: 0;
+  z-index: 9999;
+  float: left;
+`
+
+export const ImageWaveDarkBlue = styled(Wave)`
   height: auto;
-  width: 25rem;
-  z-index: 5;
+  width: 150vw;
+  z-index: -1;
+  position: fixed;
+  bottom: -10vh;
+  animation: 10s ${waving('-10%')} infinite linear;
+`
+
+export const ImageWaveLightBlue = styled(Wave)`
+  height: auto;
+  width: 150vw;
+  z-index: 7;
+  position: fixed;
+  bottom: -20vh;
+  animation: 10s ${waving('-10%')} infinite linear;
+
+  path {
+    fill: ${(props) => props.theme.colors.quaternary.one};
+  }
+`
+
+export const ImageWaveWhite = styled(Wave)`
+  height: auto;
+  width: 150vw;
+  z-index: 6;
+  position: fixed;
+  bottom: -15vh;
+  animation: 5s ${waving('-10%')} infinite linear;
+
+  path {
+    fill: white;
+  }
 `
 
 export const ImageIA = styled(IA)`
   height: auto;
-  width: 10rem;
+  width: 15vw;
   z-index: 5;
+  margin-top: 3vh;
 `
