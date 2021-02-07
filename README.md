@@ -8,9 +8,7 @@
     <img src="packages/web/src/assets/gif/preview.gif" width="fit-content" alt="Logo">
 </p>
 
-<h2 align="center">
-  <a href="https://trello-clone-liv-saude.herokuapp.com">DEMO!!!</a>
-</h2>
+## [DEMO!!!](https://trello-clone-liv-saude.herokuapp.com)
 
 ## Design:
 <p align="justify">
