@@ -12,6 +12,9 @@
 
 ## Design:
 <p align="justify">
+  O nome Platiot, fora retirado do próprio documento de requisitos. Intrigantemente.
+</p>
+<p align="justify">
   A base de inspiração fora o OCEANO, em sua imensidão de possibilidades, ancorando todos os firmwares.
 </p>
 <p align="justify">
