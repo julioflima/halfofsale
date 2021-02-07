@@ -86,7 +86,7 @@ A grande dificuldade aqui fora implementar em Next, a referência utilizada havi
   Seguem abaixo os links utilizados:
 <p align="justify">
   
+- [Repositório Original.](https://github.com/BiscuiTech/i18n-typescript-app)
 - [I - Pull Request;](https://github.com/BiscuiTech/i18n-typescript-app/pull/2)
 - [II - Pull Request;](https://github.com/BiscuiTech/i18n-typescript-app/pull/4)
 - [Tutorial;](https://dev.to/biscuitech/i18n-with-next-js-and-full-ssg-support-2aih)
-- [Repositório Original.](https://github.com/BiscuiTech/i18n-typescript-app)
