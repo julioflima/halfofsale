@@ -3,53 +3,36 @@ import styled, { css } from 'styled-components'
 
 import { IButton } from '../../src/interfaces/components/Navigation'
 
-import { ReactComponent as Tab } from '../../src/assets/svg/intersect.svg'
-
 import { FiHome, FiUsers, FiUser, FiLock, FiShield } from 'react-icons/fi'
 
 import { liquid } from '../animations'
 
 export const ContainerTab = styled.span`
-  z-index: 99;
-  position: fixed;
+  z-index: 999999;
   bottom: 0;
   display: flex;
-  align-items: center;
-  width: 100%;
+  width: 10%;
 `
 
-export const TabBar = styled(Tab)`
-  color: red;
-  width: 100%;
-`
-
-export const ContainerButtons = styled.span`
-  position: relative;
-  height: 0;
-  width: 0;
-`
 export const ContainerVirtualButtons = styled.span`
-  position: absolute;
-  height: fit-content;
-  width: 100vw;
+  margin: 0 auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
-  padding: 0 1rem;
   color: ${(props) => props.theme.colors.tertiary.one + '66'} !important;
 `
 
 export const Button = styled.span<IButton>`
-  height: 3rem;
-  width: 3rem;
+  height: 4rem;
+  width: 4rem;
   z-index: 2;
   padding: 0.5rem;
   border-radius: 50%;
   display: flex;
-  align-items: center;
   position: relative;
-  top: ${(props) => (props.animate ? ' -2.5rem' : '')};
+  left: ${(props) => (props.animate ? ' -2.7rem' : '')};
   color: ${(props) => (props.animate ? 'white' : '')};
+  cursor: pointer;
 
   box-shadow: ${(props) =>
     props.animate
@@ -65,8 +48,7 @@ export const Button = styled.span<IButton>`
           props.theme.colors.secondary.one}  100%);
         `
       : ''};
-  transform: rotate(-135deg);
-  /* transition: all ease 0.5s; */
+  transform: rotate(45deg);
 
   animation: ${(props) =>
     props.animate
@@ -81,7 +63,7 @@ export const IconHome = styled(FiHome)`
   width: 1rem;
   z-index: 2;
   margin: auto;
-  transform: rotate(-225deg);
+  transform: rotate(-45deg);
 `
 
 export const IconUsers = styled(FiUser)`
@@ -90,7 +72,7 @@ export const IconUsers = styled(FiUser)`
   display: inline-block;
   margin: auto;
   z-index: 5;
-  transform: rotate(-225deg);
+  transform: rotate(-45deg);
 `
 export const IconTeam = styled(FiUsers)`
   height: auto;
@@ -98,23 +80,5 @@ export const IconTeam = styled(FiUsers)`
   display: inline-block;
   margin: auto;
   z-index: 5;
-  transform: rotate(-225deg);
-`
-
-export const IconVip = styled(FiLock)`
-  height: auto;
-  width: 1rem;
-  display: inline-block;
-  margin: auto;
-  z-index: 5;
-  transform: rotate(-225deg);
-`
-
-export const IconSign = styled(FiShield)`
-  height: auto;
-  width: 1rem;
-  display: inline-block;
-  margin: auto;
-  z-index: 5;
-  transform: rotate(-225deg);
+  transform: rotate(-45deg);
 `

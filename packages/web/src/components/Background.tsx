@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import Head from 'next/head'
 
 import useTranslation from '../hooks/useTranslation'
 
@@ -24,15 +23,14 @@ export const Background = (props) => {
 
   return (
     <Container>
-      <Head>Platior</Head>
       <ContainerMain>
         <ContainerLogo>
           <ImagePlatiot />
           <Slogan>{slogan}</Slogan>
           <ImageIA />
         </ContainerLogo>
+        {children}
       </ContainerMain>
-      {children}
       <ContainerFooter>
         <ImageWaveDarkBlue />
         <ImageWaveWhite />

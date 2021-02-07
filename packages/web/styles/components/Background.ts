@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import marine from '../../src/assets/tiny/marine.jpg'
-import { waving } from '../animations'
+import { wavingForward, wavingBack } from '../animations'
 
 import { ReactComponent as Platiot } from '../../src/assets/svg/platiot.svg'
 import { ReactComponent as Wave } from '../../src/assets/svg/wavies.svg'
@@ -36,9 +36,10 @@ export const ContainerLogo = styled.div`
 `
 
 export const Slogan = styled.h1`
+  font-family: monospace;
   margin-top: 1rem;
   color: white;
-  font-size: 1rem;
+  font-size: 1.5rem;
   height: auto;
   width: fit-content;
   font-weight: 100;
@@ -46,7 +47,7 @@ export const Slogan = styled.h1`
 
 export const ImagePlatiot = styled(Platiot)`
   height: auto;
-  width: 35vw;
+  width: 25vw;
   z-index: 5;
   margin-top: 20%;
 `
@@ -66,7 +67,7 @@ export const ImageWaveDarkBlue = styled(Wave)`
   z-index: -1;
   position: fixed;
   bottom: -10vh;
-  animation: 10s ${waving('-10%')} infinite linear;
+  animation: 10s ${wavingForward('-10%', '-10%')} infinite linear;
 `
 
 export const ImageWaveLightBlue = styled(Wave)`
@@ -75,7 +76,8 @@ export const ImageWaveLightBlue = styled(Wave)`
   z-index: 7;
   position: fixed;
   bottom: -20vh;
-  animation: 10s ${waving('-10%')} infinite linear;
+  transform: translate(-10%, -10%);
+  animation: 10s ${wavingBack('-10%', '-10%')} infinite linear;
 
   path {
     fill: ${(props) => props.theme.colors.quaternary.one};
@@ -88,8 +90,8 @@ export const ImageWaveWhite = styled(Wave)`
   z-index: 6;
   position: fixed;
   bottom: -15vh;
-  animation: 5s ${waving('-10%')} infinite linear;
-
+  animation: 10s ${wavingForward('0%', '-10%')} infinite linear;
+  transform: translatex(-20%);
   path {
     fill: white;
   }

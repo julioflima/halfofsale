@@ -30,16 +30,16 @@ export const fade = (primaryColor, secondaryColor) => keyframes`
 
 export const liquid = (finalPosition) => keyframes`
   0% {
+    left:  ${finalPosition};
     transition: all .1s cubic-bezier(0,-0.86, 0.98,-0.02);
   }
   50%{
-    top: -7rem;
-    transform: scale(1.05) rotate(-135deg);
-    border-top-left-radius: 10%;
+    left: -6rem;
+    transform: scale(1.05) rotate(45deg);
+    border-top-right-radius: 10%;
   }
   100%{
-  background: linear-gradient(00deg, #50fa7b 0%, #00d58f 100%);
-    top: ${finalPosition};
+    left: ${finalPosition};
   }
 `
 
@@ -63,7 +63,13 @@ export const slideBottom = keyframes`
     transform: translateY(1rem);
   }
 `
-export const waving = (variation) => keyframes`
-   0% { transform:translatex(0%) }
-  25% { transform:translatex(${variation}) }
+export const wavingForward = (variationX, variationY) => keyframes`
+  0% { transform:translate(0%,0%) }
+  50% {  transform:translate(${variationX},${variationY})}
+  100% {  transform:translate(0%,0%) }
+`
+export const wavingBack = (variationX, variationY) => keyframes`
+  0% { transform:translate(${variationX},${variationY})) }
+  50% {  transform:translate(0%,0%)}
+  100% {  transform:translate(${variationX},${variationY})) }
 `

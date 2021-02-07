@@ -8,25 +8,17 @@ import {
   IconUsers,
   IconTeam,
   ContainerTab,
-  TabBar,
-  ContainerButtons,
   ContainerVirtualButtons,
-  IconVip,
-  IconSign,
 } from '../../styles/components/Navigation'
 
 export const Navigation = () => {
   const [animate, setAnimate] = useState<IButtonsAnimate>({
-    vip: false,
     team: false,
     home: true,
     users: false,
-    sign: false,
   })
 
-  useEffect(() => {
-    console.log(animate)
-  }, [animate])
+  useEffect(() => {}, [animate])
 
   const buttonAnimate = (nameButton) => {
     if (!animate[nameButton]) {
@@ -41,26 +33,17 @@ export const Navigation = () => {
   return (
     <>
       <ContainerTab>
-        <ContainerButtons>
-          <ContainerVirtualButtons>
-            <Button animate={animate.vip} onClick={() => buttonAnimate('vip')}>
-              <IconVip />
-            </Button>
-            <Button animate={animate.team} onClick={() => buttonAnimate('team')}>
-              <IconTeam />
-            </Button>
-            <Button animate={animate.home} onClick={() => buttonAnimate('home')}>
-              <IconHome />
-            </Button>
-            <Button animate={animate.users} onClick={() => buttonAnimate('users')}>
-              <IconUsers />
-            </Button>
-            <Button animate={animate.sign} onClick={() => buttonAnimate('sign')}>
-              <IconSign />
-            </Button>
-          </ContainerVirtualButtons>
-        </ContainerButtons>
-        <TabBar />
+        <ContainerVirtualButtons>
+          <Button animate={animate.team} onClick={() => buttonAnimate('team')}>
+            <IconTeam />
+          </Button>
+          <Button animate={animate.home} onClick={() => buttonAnimate('home')}>
+            <IconHome />
+          </Button>
+          <Button animate={animate.users} onClick={() => buttonAnimate('users')}>
+            <IconUsers />
+          </Button>
+        </ContainerVirtualButtons>
       </ContainerTab>
     </>
   )
