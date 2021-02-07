@@ -23,11 +23,11 @@ firmware, o sistema listasse para mim todos os arquivos (.bin ou .zip) por **pro
 **placa compatível**.
 ## Regras de Negócio:
 - O nome do arquivo de firmware deve ser salvo no seguinte formato:
-nome_do_projeto_v0_0_1.bin
-- O sistema não deve aceitar o upload de um arquivo em formatos diferente de .bin ou
-.zip (ou formatos resultantes de um processo de criptografia)
+**nome_do_projeto_v0_0_1.bin**;
+- O sistema não deve aceitar o upload de um arquivo em formatos diferente de **.bin** ou
+**.zip** (ou formatos resultantes de um processo de criptografia);
 - A versão do arquivo deve refletir a versão Maior (MAJOR), Menor (MINOR) e de
-Correção (PATCH)
+Correção (PATCH).
 
 ## Hosting:
 <p align="justify">
