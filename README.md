@@ -15,7 +15,7 @@
 versão e nome da placa compatível;
 - Eu, como engenheiro, gostaria de ter a garantia que somente usuários
 autorizados podem fazer upload e download dos arquivos de firmware;
-- Eu, como engenheiro, gostaria de garantir a integridade* do arquivo de firmware, a
+- Eu, como engenheiro, gostaria de **garantir a integridade*** do arquivo de firmware, a
 fim de impedir que alguém não autorizado tenha acesso às informações contidas na
 imagem (.bin);
 - Eu, como engenheiro, gostaria que ao abrir a plataforma de controle de versão de
