@@ -4,7 +4,7 @@
 
 </p>
 <p align="center">
-    <img src="assets/gif/preview.gif" width="fit-content" alt="Logo">
+    <img src="src/assets/gif/preview.gif" width="fit-content" alt="Logo">
 </p>
 
 ## [DEMO!!!](https://trello-clone-liv-saude.herokuapp.com)
