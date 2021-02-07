@@ -59,9 +59,8 @@ Driver: `SELECT * FROM users`
 
 Query Builder: `table('users').select('*').where()`
 
-Também fora adicionado um Template compatível com o software Insomnia, para fazer a inserção de "To dos" e testar o endpoint.
-
-No modo desenvolvimento fora utilizado o SQLite, e no modo produção o PostgreSQL, como pedido.
+## Banco de Dados:
+Fora utilizado o como banco de o PostgreSQL.
 
 ## Front End
 <p align="justify">
