@@ -1,5 +1,12 @@
-# Platiot
+<p align="center">	
+	<h1 align="center">⚓ Platiot 🚀</h1>
+  <p align="center">Sistema de Versionamento de Firmwares</p>
 
+</p>
+<p align="center">
+    <img src="assets/gif/preview.gif" width="fit-content" alt="Logo">
+</p>
+  
 
 ## [DEMO!!!](https://trello-clone-liv-saude.herokuapp.com)
 
