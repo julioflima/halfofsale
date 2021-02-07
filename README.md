@@ -6,9 +6,21 @@
 <p align="center">
     <img src="assets/gif/preview.gif" width="fit-content" alt="Logo">
 </p>
-  
 
 ## [DEMO!!!](https://trello-clone-liv-saude.herokuapp.com)
+
+## Design:
+<p align="justify">
+  A base de inspiração fora o OCEANO, em sua imensidão de possibilidades, ancorando todos os firmwares.
+</p>
+<p align="justify">
+  Segue abaixo as cores principais do projeto.
+</p>
+<p align="center">
+    <img src="https://user-images.githubusercontent.com/17098382/107158366-45977080-6968-11eb-8601-5d1185421846.png" width="fit-content" alt="Logo">
+</p>
+
+Link do projeto, feito utilizando o Figma: https://github.com/juloko/TrelloClone-Backend
 
 ## User Stories:
 - Eu, como engenheiro, gostaria de manter (CRUD) *firmware* com **nome do projeto**,
