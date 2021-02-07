@@ -4,6 +4,9 @@
   "main": "index.js",
   "repository": "https://github.com/juliofliam/Platiot.git",
   "author": "Julio Lima",
+  "scripts": {
+    "production": "node packages/backend/src/server.js"
+  },
   "workspaces": {
     "packages": [
       "packages/*",
