@@ -80,7 +80,7 @@ O usuário final da aplicação será um engenheiro que possui como língua de t
 Com esse propsito fora utilizada uma biblioteca em next de modo a prover traduções do site, gerada automaticamente durante o processo de build. Cada página será gerada em duas línguas, PT e EN.
 <p align="justify">
 <p align="justify">
-A grande dificuldade aqui fora implementar em Next, a referência utilizada havia muitos erros de Typescript, todos eles corrigidos e enviados PR para o projeto original
+A grande dificuldade aqui fora implementar em Next, a referência utilizada havia muitos erros de Typescript, todos eles corrigidos e enviados PR para o projeto original.
 <p align="justify">
 <p align="justify">
   Seguem abaixo os links utilizados:
