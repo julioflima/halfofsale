@@ -5,7 +5,8 @@
   "repository": "https://github.com/juliofliam/Platiot.git",
   "author": "Julio Lima",
   "scripts": {
-    "production": "node packages/backend/src/server.js"
+    "build": "yarn workspaces foreach run build",
+    "start": "yarn workspaces server start"
   },
   "workspaces": {
     "packages": [
