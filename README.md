@@ -1,13 +1,15 @@
 <p align="center">	
-	<h1 align="center">⚓ Platiot 🚀</h1>
+	<h1 align="center">
+    <span>⚓ Platiot 🚀</span>
+    <a href="https://trello-clone-liv-saude.herokuapp.com">DEMO!!!</>
+  </h1>
   <p align="center">Sistema de Versionamento de Firmwares</p>
-
 </p>
 <p align="center">
     <img src="packages/web/src/assets/gif/preview.gif" width="fit-content" alt="Logo">
 </p>
 
-## [DEMO!!!](https://trello-clone-liv-saude.herokuapp.com)
+## 
 
 ## Design:
 <p align="justify">
