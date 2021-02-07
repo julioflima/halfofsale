@@ -22,6 +22,7 @@
 
 #### Links no Figma:
 Preview: https://www.figma.com/proto/tLffijQFskMjUcsEAFokKt/Platiot?node-id=1%3A4&scaling=min-zoom
+
 Projeto: https://www.figma.com/file/tLffijQFskMjUcsEAFokKt/Platiot?node-id=0%3A1
 
 ## User Stories:
