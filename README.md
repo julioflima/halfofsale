@@ -1,15 +1,19 @@
 <p align="center">	
-	<h1 align="center">⚓ Platiot 🚀</h1>
+	<h1 align="center">
+    <span>⚓ Platiot 🚀</span>
+  </h1>
   <p align="center">Sistema de Versionamento de Firmwares</p>
-
 </p>
 <p align="center">
-    <img src="assets/gif/preview.gif" width="fit-content" alt="Logo">
+    <img src="packages/web/src/assets/gif/preview.gif" width="fit-content" alt="Logo">
 </p>
 
 ## [DEMO!!!](https://trello-clone-liv-saude.herokuapp.com)
 
 ## Design:
+<p align="justify">
+  O nome Platiot, fora retirado do próprio documento de requisitos. Intrigantemente.
+</p>
 <p align="justify">
   A base de inspiração fora o OCEANO, em sua imensidão de possibilidades, ancorando todos os firmwares.
 </p>
