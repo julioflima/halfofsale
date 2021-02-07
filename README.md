@@ -68,10 +68,12 @@ No modo desenvolvimento fora utilizado o SQLite, e no modo produção o PostgreS
 <p align="justify">
 A aplicação fora desenvolvida em React, visando uma utilização em um computador. A responsividade aqui não fora o foco devido ao pouco tempo, (novamente não seria nada complicado a implementação), no entanto o foco aqui foram as funcionalidades básicas.
 </p>
+
 ### NEXT TS:
 <p align="justify">
 Acreditando que há uma forte tendência de aplicaçes em Next, sevivo a uma série de tecnologias que garatem performace como o SSG (Static Site Generetion)... Portanto Next fora bastante utilizado, para gerar páginas dinâmicas, sendo elas pre-renderizadas no build.
 <p align="justify">
+  
 ### Tradução:
 <p align="justify">
 O usuário final da aplicação será um engenheiro que possui como língua de trabalho o inglês, em muitos deles o seu computador está configurado em inglês e sendo um projeto em inglês poderão haver estrangeiros trabalhando no projeto sem nenhuma familiaridade com o português.
@@ -86,7 +88,7 @@ A grande dificuldade aqui fora implementar em Next, a referência utilizada havi
   Seguem abaixo os links utilizados:
 <p align="justify">
   
-- [Repositório Original.](https://github.com/BiscuiTech/i18n-typescript-app)
+- [Repositório Original;](https://github.com/BiscuiTech/i18n-typescript-app)
 - [I - Pull Request;](https://github.com/BiscuiTech/i18n-typescript-app/pull/2)
 - [II - Pull Request;](https://github.com/BiscuiTech/i18n-typescript-app/pull/4)
-- [Tutorial;](https://dev.to/biscuitech/i18n-with-next-js-and-full-ssg-support-2aih)
+- [Tutorial.](https://dev.to/biscuitech/i18n-with-next-js-and-full-ssg-support-2aih)
