@@ -17,7 +17,7 @@
   Segue abaixo as cores principais do projeto.
 </p>
 <p align="center">
-    <img src="https://user-images.githubusercontent.com/17098382/107158366-45977080-6968-11eb-8601-5d1185421846.png" width="fit-content" alt="Logo">
+    <img src="https://user-images.githubusercontent.com/17098382/107158366-45977080-6968-11eb-8601-5d1185421846.png" width="400" alt="Logo">
 </p>
 
 Link do projeto, feito utilizando o Figma: https://github.com/juloko/TrelloClone-Backend
