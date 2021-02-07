@@ -7,8 +7,6 @@
     <img src="assets/gif/preview.gif" width="fit-content" alt="Logo">
 </p>
 
-<iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Ffile%2FtLffijQFskMjUcsEAFokKt%2FPlatiot%3Fnode-id%3D0%253A1" allowfullscreen></iframe>
-
 ## [DEMO!!!](https://trello-clone-liv-saude.herokuapp.com)
 
 ## Design:
@@ -22,7 +20,7 @@
     <img src="https://user-images.githubusercontent.com/17098382/107158366-45977080-6968-11eb-8601-5d1185421846.png" width="400" alt="Logo">
 </p>
 
-Link do projeto, feito utilizando o Figma: https://github.com/juloko/TrelloClone-Backend
+Link do projeto, feito utilizando o Figma: https://www.figma.com/file/tLffijQFskMjUcsEAFokKt/Platiot?node-id=0%3A1
 
 ## User Stories:
 - Eu, como engenheiro, gostaria de manter (CRUD) *firmware* com **nome do projeto**,
