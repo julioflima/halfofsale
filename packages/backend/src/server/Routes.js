@@ -44,7 +44,6 @@ module.exports = class Routes {
     this.routes.put(
       '/users/:user_id/firmwares/:firmware_id',
       FileMiddleware.get(),
-
       celebrate(FirmwaresDTO.update()),
       FirmwaresController.update
     )

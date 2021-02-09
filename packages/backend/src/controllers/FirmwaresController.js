@@ -1,11 +1,13 @@
 const { Sequelize } = require('sequelize')
+const aws = require('aws-sdk')
 
 const Users = require('../models/Users')
 const Firmwares = require('../models/Firmwares')
 const FirmwaresService = require('../services/FirmwaresService')
 
-const { getNameFile } = require('../utils/getNameFile')
 const { errorToMessage } = require('../utils/captalize')
+
+const s3 = new aws.S3()
 
 module.exports = class FirmwaresController {
   static async create(req, res) {
@@ -15,7 +17,7 @@ module.exports = class FirmwaresController {
       const { size, key, location: url = '' } = req.file
 
       const user = await Users.findByPk(user_id)
-      if (!user) return res.status(400).json({ message: 'User not found!' })
+      if (!user) throw { code: 400, message: 'User not found!' }
 
       const lastData = await Firmwares.findAll({
         limit: 1,
@@ -32,9 +34,10 @@ module.exports = class FirmwaresController {
       )
 
       if (lastVersionisHigherVersion)
-        return res.status(400).json({
+        throw {
+          code: 400,
           message: 'Already exists higher version in this project! Please, set a higher version.',
-        })
+        }
 
       const firmware = await Firmwares.create({
         version_major,
@@ -52,8 +55,19 @@ module.exports = class FirmwaresController {
         message: `The project ${name_project}, with firmware '${name_board}', v${version_major}.${version_minor}.${version_patch}, was created!`,
       })
     } catch (error) {
-      console.log(error)
-      return res.status(401).json({
+      await s3
+        .deleteObject({
+          Bucket: process.env.BUCKET_NAME,
+          Key: req.file.key,
+        })
+        .promise()
+
+      if (error.code)
+        return res.status(error.code).json({
+          message: error.message,
+        })
+
+      return res.status(500).json({
         error: error,
         message: errorToMessage(error),
       })
@@ -99,10 +113,10 @@ module.exports = class FirmwaresController {
       const { size, key, location: url = '' } = req.file
 
       const user = await Users.findByPk(user_id)
-      if (!user) return res.status(400).json({ message: 'User not found!' })
+      if (!user) throw { code: 400, message: 'User not found!' }
 
       const firmware = await Firmwares.findByPk(firmware_id)
-      if (!firmware) return res.status(401).json({ message: 'Firmware not found!' })
+      if (!firmware) throw { code: 400, message: 'Firmware not found!' }
 
       const lastData = await Firmwares.findAll({
         limit: 1,
@@ -119,12 +133,20 @@ module.exports = class FirmwaresController {
       )
 
       if (lastVersionisHigherVersion)
-        return res.status(400).json({
+        throw {
+          code: 400,
           message:
             'Already exists higher version in this project! Please, set the same or a higher version.',
-        })
+        }
 
-      const firmware = await Firmwares.update(
+      await s3
+        .deleteObject({
+          Bucket: process.env.BUCKET_NAME,
+          Key: firmware.name_file,
+        })
+        .promise()
+
+      await Firmwares.update(
         {
           version_major,
           version_minor,
@@ -141,12 +163,22 @@ module.exports = class FirmwaresController {
       )
 
       return res.status(200).json({
-        data: firmware,
         message: `The project ${name_project}, with firmware '${name_board}', v${version_major}.${version_minor}.${version_patch}, was updated!`,
       })
     } catch (error) {
-      console.log(error)
-      return res.status(401).json({
+      await s3
+        .deleteObject({
+          Bucket: process.env.BUCKET_NAME,
+          Key: req.file.key,
+        })
+        .promise()
+
+      if (error.code)
+        return res.status(error.code).json({
+          message: error.message,
+        })
+
+      return res.status(500).json({
         error: error,
         message: errorToMessage(error),
       })
@@ -163,7 +195,13 @@ module.exports = class FirmwaresController {
       const firmware = await Firmwares.findByPk(firmware_id)
       if (!firmware) return res.status(401).json({ message: 'Firmware not found!' })
 
-      console.log(firmware)
+      await s3
+        .deleteObject({
+          Bucket: process.env.BUCKET_NAME,
+          Key: firmware.name_file,
+        })
+        .promise()
+
       await Firmwares.destroy({
         where: {
           id: firmware_id,
@@ -175,8 +213,7 @@ module.exports = class FirmwaresController {
         message: `The project ${firmware.name_project}, with firmware '${firmware.name_board}', v${firmware.version_major}.${firmware.version_minor}.${firmware.version_patch}, was deleted!`,
       })
     } catch (error) {
-      console.log(error)
-      return res.status(401).json({
+      return res.status(500).json({
         error: error,
         message: errorToMessage(error),
       })
