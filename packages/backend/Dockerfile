@@ -7,9 +7,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN apt-get update && apt-get install -y tzdata
-RUN cp /usr/share/zoneinfo/America/Fortaleza /etc/localtime
-
 RUN yarn
 
 EXPOSE 80

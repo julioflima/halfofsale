@@ -1,31 +1,22 @@
-const Cloud = require('../database/Cloud')
-const db = Cloud.init()
+const Users = require('../models/Users')
 
-const SensorServices = require('../services/SensorServices')
+const { errorToMessage } = require('../utils/captalize')
 
-module.exports = class SensorController {
+module.exports = class UsersController {
   static async create(req, res) {
     try {
-      const { name, value, timestamp } = req.body
+      const { name, email } = req.body
 
-      const date = SensorServices.date(timestamp)
+      const user = await Users.create({ name, email })
 
-      const [id] = await db('sensor').insert({
-        id: timestamp,
-        name,
-        date,
-        value,
-        timestamp,
+      return res.status(200).json({
+        data: user,
+        message: `User '${name}', with email '${email}' created!`,
       })
-
-      return res
-        .status(200)
-        .json({ message: `Timestamp '${timestamp}', of sensor '${name}'  added! Id:`, id })
     } catch (error) {
-      return res.status(500).json({
+      return res.status(401).json({
         error: error,
-        message: `Timestamp '${timestamp}', of sensor '${name}'  added! Id:`,
-        id,
+        message: errorToMessage(error),
       })
     }
   }

@@ -2,8 +2,10 @@ const { celebrate } = require('celebrate')
 const express = require('express')
 
 const SensorDTO = require('../dtos/SensorDTO')
-const SensorServices = require('../services/SensorServices')
 const SensorController = require('../controllers/SensorController')
+
+const UsersDTO = require('../dtos/UsersDTO')
+const UsersController = require('../controllers/UsersController')
 
 module.exports = class Routes {
   constructor() {
@@ -18,14 +20,10 @@ module.exports = class Routes {
   }
 
   map() {
+    this.routes.post('/users', celebrate(UsersDTO.create()), UsersController.create)
+
+    this.routes.post('/sensor', celebrate(SensorDTO.postSensor()), SensorController.create)
     this.routes.get('/sensor', celebrate(SensorDTO.getSensor()), SensorController.index)
-    this.routes.post(
-      '/sensor',
-      celebrate(SensorDTO.postSensor()),
-      SensorServices.date,
-      celebrate(SensorDTO.ruleDate()),
-      SensorController.store
-    )
     this.routes.delete('/sensor', celebrate(SensorDTO.deleteSensor()), SensorController.delete)
   }
 }

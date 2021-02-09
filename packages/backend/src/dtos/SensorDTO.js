@@ -19,10 +19,8 @@ module.exports = class SensorDTO {
 
   static postSensor() {
     return {
-      [Segments.QUERY]: Joi.object().keys({
-        name: Joi.string().required(),
-      }),
       [Segments.BODY]: Joi.object().keys({
+        name: Joi.string().required(),
         value: Joi.number().required(),
         timestamp: Joi.number().integer().required(),
       }),
