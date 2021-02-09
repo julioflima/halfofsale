@@ -37,19 +37,21 @@ module.exports = class Routes {
       FirmwaresController.create
     )
     this.routes.get(
-      '/users/:user_id/firmwares/firmware_id',
+      '/users/:user_id/firmwares',
       celebrate(FirmwaresDTO.index()),
       FirmwaresController.index
     )
     this.routes.put(
       '/users/:user_id/firmwares/firmware_id',
-      celebrate(FirmwaresDTO.index()),
-      FirmwaresController.index
+      FileMiddleware.get(),
+
+      celebrate(FirmwaresDTO.update()),
+      FirmwaresController.update
     )
     this.routes.delete(
       '/users/:user_id/firmwares/firmware_id',
-      celebrate(FirmwaresDTO.index()),
-      FirmwaresController.index
+      celebrate(FirmwaresDTO.delete()),
+      FirmwaresController.delete
     )
 
     this.routes.get('/login', celebrate(LoginDTO.index()), LoginController.index)

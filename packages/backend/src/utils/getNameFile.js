@@ -7,5 +7,5 @@ exports.getNameFile = (nameFile, versionMajor, ...rest) => {
 
   const joinedWithUnderScore = addRest.join('_')
 
-  return joinedWithUnderScore
+  return String(joinedWithUnderScore).toLowerCase()
 }

@@ -20,11 +20,10 @@ module.exports = class FirmwaresDTO {
     return {
       [Segments.PARAMS]: Joi.object().keys({
         user_id: Joi.string().uuid().required(),
-        firmware_id: Joi.string().uuid().required(),
       }),
       [Segments.QUERY]: Joi.object().keys({
-        name_project: Joi.string().optional(),
-        name_board: Joi.string().optional(),
+        filter: Joi.string().optional(),
+        filter_by: Joi.boolean().optional(),
       }),
     }
   }
