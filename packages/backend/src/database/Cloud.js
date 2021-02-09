@@ -1,18 +1,16 @@
 const Sequelize = require('sequelize')
-const dbConfig = require('../config/database')
+const DatabaseConfig = require('../config/DatabaseConfig')
 
 const Users = require('../models/Users')
 const Firmwares = require('../models/Firmwares')
 
 module.exports = class Cloud {
   static init() {
+    const dbConfig = DatabaseConfig.get()
     const connection = new Sequelize(dbConfig)
 
     Users.init(connection)
     Firmwares.init(connection)
-
-    Users.associate(connection.models)
-    Firmwares.associate(connection.models)
 
     return connection
   }

@@ -9,16 +9,11 @@ module.exports = class Firmwares extends Model {
         version_patch: DataTypes.INTEGER,
         name_project: DataTypes.STRING,
         name_board: DataTypes.STRING,
+        name_file: DataTypes.STRING,
+        size_file: DataTypes.INTEGER,
+        url_file: DataTypes.STRING,
       },
       { sequelize: connection }
     )
-  }
-
-  static associate(models) {
-    this.belongsToMany(models.Users, {
-      foreignKey: 'firmware_id',
-      through: 'users_firmwares',
-      as: 'group_of_work',
-    })
   }
 }

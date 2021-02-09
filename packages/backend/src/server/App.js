@@ -17,6 +17,7 @@ module.exports = class App {
     )
     this.server.use(express.json())
     this.server.use(errors())
+    this.server.use(express.urlencoded({ extended: true }))
   }
 
   router() {

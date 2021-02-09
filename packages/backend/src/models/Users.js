@@ -7,16 +7,9 @@ module.exports = class Users extends Model {
         name: DataTypes.STRING,
         email: DataTypes.STRING,
         password: DataTypes.STRING,
+        admin: DataTypes.BOOLEAN,
       },
       { sequelize: connection }
     )
-  }
-
-  static associate(models) {
-    this.belongsToMany(models.Firmwares, {
-      foreignKey: 'user_id',
-      through: 'users_firmwares',
-      as: 'firmwares',
-    })
   }
 }

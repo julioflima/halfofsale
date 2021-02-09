@@ -1,6 +1,6 @@
 require('dotenv/config')
 
-module.exports = {
+const config = {
   dialect: 'postgres',
   host: process.env.DB_HOST,
   username: process.env.DB_USER,
@@ -11,3 +11,5 @@ module.exports = {
     underscored: true,
   },
 }
+
+module.exports = config
