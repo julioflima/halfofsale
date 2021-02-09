@@ -3,13 +3,16 @@ FROM node:12
 
 LABEL version="1.0.0" description="Platiot" maintainer="Julio Lima<julio_flima@hotmail.com>"
 
-WORKDIR /app
+WORKDIR /usr/app
+
+COPY package*.json ./
+RUN npm install
 
 COPY . .
 
-RUN yarn
+EXPOSE 3333
 
-EXPOSE 80
+RUN npm install pm2 -g
 
-CMD NODE_URLS=http://*:$PORT npm start
+CMD NODE_URLS=http://*:$PORT pm2-runtime src/index.js
 
