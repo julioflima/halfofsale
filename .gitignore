@@ -53,3 +53,5 @@ jspm_packages/
 # Debug
 npm-debug.log*
 
+
+.vscode

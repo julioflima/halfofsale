@@ -11,6 +11,7 @@
 ## [DEMO!!!](https://trello-clone-liv-saude.herokuapp.com)
 
 ## Design:
+
 <p align="justify">
   O nome Platiot, fora retirado do próprio documento de requisitos. Intrigantemente.
 </p>
@@ -25,30 +26,53 @@
 </p>
 
 #### Links no Figma:
+
 Preview: https://www.figma.com/proto/tLffijQFskMjUcsEAFokKt/Platiot?node-id=1%3A4&scaling=min-zoom
 
 Projeto: https://www.figma.com/file/tLffijQFskMjUcsEAFokKt/Platiot?node-id=0%3A1
 
 ## User Stories:
-- Eu, como engenheiro, gostaria de manter (CRUD) *firmware* com **nome do projeto**,
-**versão** e **nome da placa compatível**;
+
+- Eu, como engenheiro, gostaria de manter (CRUD) _firmware_ com **nome do projeto**,
+  **versão** e **nome da placa compatível**;
 - Eu, como engenheiro, gostaria de ter a garantia que somente usuários
-autorizados podem fazer upload e download dos arquivos de *firmware*;
+  autorizados podem fazer upload e download dos arquivos de _firmware_;
 - Eu, como engenheiro, gostaria de **garantir a integridade** do arquivo de firmware, a
-fim de impedir que alguém não autorizado tenha acesso às informações contidas na
-imagem (.bin);
+  fim de impedir que alguém não autorizado tenha acesso às informações contidas na
+  imagem (.bin);
 - Eu, como engenheiro, gostaria que ao abrir a plataforma de controle de versão de
-firmware, o sistema listasse para mim todos os arquivos (.bin ou .zip) por **projeto** e
-**placa compatível**.
+  firmware, o sistema listasse para mim todos os arquivos (.bin ou .zip) por **projeto** e
+  **placa compatível**.
+
 ## Regras de Negócio:
+
 - O nome do arquivo de firmware deve ser salvo no seguinte formato:
-**nome_do_projeto_v0_0_1.bin**;
+  **nome_do_projeto_v0_0_1.bin**;
 - O sistema não deve aceitar o upload de um arquivo em formatos diferente de **.bin** ou
-**.zip** (ou formatos resultantes de um processo de criptografia);
+  **.zip** (ou formatos resultantes de um processo de criptografia);
 - A versão do arquivo deve refletir a versão Maior (MAJOR), Menor (MINOR) e de
-Correção (PATCH).
+  Correção (PATCH).
 
 ## Hosting:
+
+<p align="justify">
+  A aplicação backend encontra-se hospedada no Heroku.
+</p>
+<p align="justify">
+  A aplicação frontend encontra-se hospedada na Vercel.
+</p>
+<p align="justify">
+  A aplicação, storage encontra-se hospedada na AWS S3.
+</p>
+<p align="justify">
+  A aplicação, banco de dados PostgreSQL encontra-se hospedada na ElephantSQL.
+</p>
+<p align="justify">
+O projeto foi inicialmente pensado como "monorepo", houve alguns conflitos, na hospedagem do Heroku (nada que com mais tempo não pudesse ser resolvido). Desse modo fora criado esse repositório para unificar os diretórios e os diretórios backend e frontend foram dividos em outros dois repositórios. Segue abaixo os respectivos links:
+</p>
+
+## Hosting:
+
 <p align="justify">
   A aplicação encontra-se hospedada no Heroku.
 </p>
@@ -56,11 +80,9 @@ Correção (PATCH).
 O projeto foi inicialmente pensado como "monorepo", houve alguns conflitos, na hospedagem do Heroku (nada que com mais tempo não pudesse ser resolvido). Desse modo fora criado esse repositório para unificar os diretórios e os diretórios backend e frontend foram dividos em outros dois repositórios. Segue abaixo os respectivos links:
 </p>
 
-## Repositories:
+## Repositorie:
 
-Link Repositório Backend: https://github.com/juloko/TrelloClone-Backend
-
-Link Repositório Frontend: https://github.com/juloko/TrelloClone-Frontend
+Link Repositório Backend e Frontend: https://github.com/julioflima/platiot
 
 ## Deploy
 
@@ -69,24 +91,29 @@ Link Backend: https://trello-clone-liv-saude-backend.herokuapp.com
 Link Frontend: https://trello-clone-liv-saude.herokuapp.com
 
 ## Back End:
-<p align="justify">
-Na aplicação não fora utilizado scripts SQL puros, e sim uma tecnologia chamada Query Builder que possibilita por meio de código em JS, fazer uma chamada a scripts de maneira mais natural. A principal vantagem do Query Builder, é na verdade a portabilidade para qualquer banco de dados em SQL, seja ele, Oracle, MySQL ou PostgreSQL. O Query Builder, utilizado fora o Knex. Segue abaixo uma comparação entre as duas tecnologias:
-</p>
 
+<p align="justify">
+Na aplicação não fora utilizado scripts SQL puros, e sim uma tecnologia chamada Query Builder que possibilita por meio de código em JS, fazer uma chamada a scripts de maneira mais natural. A principal vantagem do Query Builder, é na verdade a portabilidade para qualquer banco de dados em SQL, seja ele, Oracle, MySQL ou PostgreSQL. O Query Builder, utilizado fora o Sequelize. Segue abaixo uma breve comparação entre as duas tecnologias:
+</p>
 
 Driver: `SELECT * FROM users`
 
 Query Builder: `table('users').select('*').where()`
 
 ## Banco de Dados:
-Fora utilizado o como banco de o PostgreSQL.
+
+Fora utilizado o como banco de dados o PostgreSQL.
+
+Ele está hospedado na plataforma [Elephathy](https://www.elephantsql.com/), já que destinado para testes, ele possui 20mb gratuitos.
 
 ## Front End
+
 <p align="justify">
 A aplicação fora desenvolvida em React, visando uma utilização em um computador. A responsividade aqui não fora o foco devido ao pouco tempo, (novamente não seria nada complicado a implementação), no entanto o foco aqui foram as funcionalidades básicas.
 </p>
 
 ### NEXT TS:
+
 <p align="justify">
 Acreditando que há uma forte tendência de aplicaçes em Next, sevivo a uma série de tecnologias que garatem performace como o SSG (Static Site Generetion)... Portanto Next fora bastante utilizado, para gerar páginas dinâmicas, sendo elas pre-renderizadas no build.
 <p align="justify">
