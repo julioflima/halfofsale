@@ -1,11 +1,14 @@
 const { celebrate } = require('celebrate')
 const express = require('express')
 
-const SensorDTO = require('../dtos/SensorDTO')
-const SensorController = require('../controllers/SensorController')
-
 const UsersDTO = require('../dtos/UsersDTO')
 const UsersController = require('../controllers/UsersController')
+
+const LoginDTO = require('../dtos/LoginDTO')
+const LoginController = require('../controllers/LoginController')
+
+const FirmwaresDTO = require('../dtos/FirmwaresDTO')
+const FirmwaresController = require('../controllers/FirmwaresController')
 
 module.exports = class Routes {
   constructor() {
@@ -21,9 +24,19 @@ module.exports = class Routes {
 
   map() {
     this.routes.post('/users', celebrate(UsersDTO.create()), UsersController.create)
+    this.routes.get('/users/:user_id', celebrate(UsersDTO.index()), UsersController.index)
 
-    this.routes.post('/sensor', celebrate(SensorDTO.postSensor()), SensorController.create)
-    this.routes.get('/sensor', celebrate(SensorDTO.getSensor()), SensorController.index)
-    this.routes.delete('/sensor', celebrate(SensorDTO.deleteSensor()), SensorController.delete)
+    this.routes.get('/users/:user_id', celebrate(LoginDTO.index()), LoginController.index)
+
+    this.routes.post(
+      '/users/firmwares/:user_id',
+      celebrate(FirmwaresDTO.create()),
+      FirmwaresController.create
+    )
+    this.routes.get(
+      '/users/firmwares/:user_id',
+      celebrate(FirmwaresDTO.index()),
+      FirmwaresController.index
+    )
   }
 }

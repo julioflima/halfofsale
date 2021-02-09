@@ -1,5 +1,4 @@
 const { Model, DataTypes } = require('sequelize')
-// import { uuid } from 'uuidv4'
 
 module.exports = class Users extends Model {
   static init(connection) {
@@ -7,15 +6,17 @@ module.exports = class Users extends Model {
       {
         name: DataTypes.STRING,
         email: DataTypes.STRING,
-        pwassword: DataTypes.STRING,
+        password: DataTypes.STRING,
       },
       { sequelize: connection }
     )
+  }
 
-    // this.addHook('beforeSave', async (user) => {
-    //   return (user.id = uuid())
-    // })
-
-    // return this
+  static associate(models) {
+    this.belongsToMany(models.Firmwares, {
+      foreignKey: 'user_id',
+      through: 'users_firmwares',
+      as: 'firmwares',
+    })
   }
 }

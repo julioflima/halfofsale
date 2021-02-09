@@ -2,7 +2,7 @@ const Users = require('../models/Users')
 
 const { errorToMessage } = require('../utils/captalize')
 
-module.exports = class UsersController {
+module.exports = class LoginController {
   static async index(req, res) {
     try {
       const { name, email } = req.body
