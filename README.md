@@ -13,7 +13,7 @@
 ## Design:
 
 <p align="justify">
-  O nome Platiot, fora retirado do próprio documento de requisitos. Intrigantemente.
+  O nome Platiot, fora retirado do próprio documento de requisitos. Intrigantemente Plat IOT.
 </p>
 <p align="justify">
   A base de inspiração fora o OCEANO, em sua imensidão de possibilidades, ancorando todos os firmwares.
@@ -55,9 +55,26 @@ Projeto: https://www.figma.com/file/tLffijQFskMjUcsEAFokKt/Platiot?node-id=0%3A1
 
 ## Hosting:
 
+### Backend
+
 <p align="justify">
   A aplicação backend encontra-se hospedada no Heroku.
 </p>
+
+##### Docker
+
+`sudo docker ps`
+`sudo docker stop "hash"`
+`sudo docker build -t platiot .`
+`docker run -p 3333:3333 -d platiot`
+
+##### Heroku
+
+`heroku login`
+`heroku container:login`
+`heroku container:push web -a platiot`
+`heroku container:release web -a platiot`
+
 <p align="justify">
   A aplicação frontend encontra-se hospedada na Vercel.
 </p>
@@ -71,24 +88,15 @@ Projeto: https://www.figma.com/file/tLffijQFskMjUcsEAFokKt/Platiot?node-id=0%3A1
 O projeto foi inicialmente pensado como "monorepo", houve alguns conflitos, na hospedagem do Heroku (nada que com mais tempo não pudesse ser resolvido). Desse modo fora criado esse repositório para unificar os diretórios e os diretórios backend e frontend foram dividos em outros dois repositórios. Segue abaixo os respectivos links:
 </p>
 
-## Hosting:
-
-<p align="justify">
-  A aplicação encontra-se hospedada no Heroku.
-</p>
-<p align="justify">
-O projeto foi inicialmente pensado como "monorepo", houve alguns conflitos, na hospedagem do Heroku (nada que com mais tempo não pudesse ser resolvido). Desse modo fora criado esse repositório para unificar os diretórios e os diretórios backend e frontend foram dividos em outros dois repositórios. Segue abaixo os respectivos links:
-</p>
-
-## Repositorie:
+## Repository:
 
 Link Repositório Backend e Frontend: https://github.com/julioflima/platiot
 
 ## Deploy
 
-Link Backend: https://trello-clone-liv-saude-backend.herokuapp.com
+Link Backend: https://platiot.herokuapp.com/
 
-Link Frontend: https://trello-clone-liv-saude.herokuapp.com
+Link Frontend: https://platiot.vercel.app/
 
 ## Back End:
 
