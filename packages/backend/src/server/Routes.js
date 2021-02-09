@@ -42,14 +42,14 @@ module.exports = class Routes {
       FirmwaresController.index
     )
     this.routes.put(
-      '/users/:user_id/firmwares/firmware_id',
+      '/users/:user_id/firmwares/:firmware_id',
       FileMiddleware.get(),
 
       celebrate(FirmwaresDTO.update()),
       FirmwaresController.update
     )
     this.routes.delete(
-      '/users/:user_id/firmwares/firmware_id',
+      '/users/:user_id/firmwares/:firmware_id',
       celebrate(FirmwaresDTO.delete()),
       FirmwaresController.delete
     )

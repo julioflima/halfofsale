@@ -23,7 +23,7 @@ module.exports = class FirmwaresDTO {
       }),
       [Segments.QUERY]: Joi.object().keys({
         filter: Joi.string().optional(),
-        filter_by: Joi.boolean().optional(),
+        filter_by: Joi.string().optional(),
       }),
     }
   }

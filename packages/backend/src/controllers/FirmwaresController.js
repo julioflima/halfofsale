@@ -17,7 +17,7 @@ module.exports = class FirmwaresController {
       const user = await Users.findByPk(user_id)
       if (!user) return res.status(400).json({ message: 'User not found!' })
 
-      const lastFirmware = await Firmwares.findAll({
+      const lastData = await Firmwares.findAll({
         limit: 1,
         where: {
           name_project,
@@ -27,10 +27,8 @@ module.exports = class FirmwaresController {
       })
 
       const lastVersionisHigherVersion = FirmwaresService.isHigherVersion(
-        lastFirmware,
-        version_major,
-        version_minor,
-        version_patch
+        { lastData, version_major, version_minor, version_patch },
+        '>='
       )
 
       if (lastVersionisHigherVersion)
@@ -51,7 +49,7 @@ module.exports = class FirmwaresController {
 
       return res.status(200).json({
         data: firmware,
-        message: `The project ${name_project}, with firmware '${name_board}', v${version_major}.${version_minor}.${version_patch}, was create created!`,
+        message: `The project ${name_project}, with firmware '${name_board}', v${version_major}.${version_minor}.${version_patch}, was created!`,
       })
     } catch (error) {
       console.log(error)
@@ -103,7 +101,10 @@ module.exports = class FirmwaresController {
       const user = await Users.findByPk(user_id)
       if (!user) return res.status(400).json({ message: 'User not found!' })
 
-      const lastFirmware = await Firmwares.findAll({
+      const firmware = await Firmwares.findByPk(firmware_id)
+      if (!firmware) return res.status(401).json({ message: 'Firmware not found!' })
+
+      const lastData = await Firmwares.findAll({
         limit: 1,
         where: {
           id: firmware_id,
@@ -113,31 +114,35 @@ module.exports = class FirmwaresController {
       })
 
       const lastVersionisHigherVersion = FirmwaresService.isHigherVersion(
-        lastFirmware,
-        version_major,
-        version_minor,
-        version_patch
+        { lastData, version_major, version_minor, version_patch },
+        '>'
       )
 
       if (lastVersionisHigherVersion)
         return res.status(400).json({
-          message: 'Already exists higher version in this project! Please, set a higher version.',
+          message:
+            'Already exists higher version in this project! Please, set the same or a higher version.',
         })
 
-      const firmware = await Firmwares.create({
-        version_major,
-        version_minor,
-        version_patch,
-        name_project,
-        name_board,
-        name_file: key,
-        size_file: size,
-        url_file: url,
-      })
+      const firmware = await Firmwares.update(
+        {
+          version_major,
+          version_minor,
+          version_patch,
+          name_project,
+          name_board,
+          name_file: key,
+          size_file: size,
+          url_file: url,
+        },
+        {
+          where: { id: firmware_id },
+        }
+      )
 
       return res.status(200).json({
         data: firmware,
-        message: `The project ${name_project}, with firmware '${name_board}', v${version_major}.${version_minor}.${version_patch}, was create created!`,
+        message: `The project ${name_project}, with firmware '${name_board}', v${version_major}.${version_minor}.${version_patch}, was updated!`,
       })
     } catch (error) {
       console.log(error)
@@ -148,27 +153,26 @@ module.exports = class FirmwaresController {
     }
   }
 
-  static async index(req, res) {
+  static async delete(req, res) {
     try {
       const { user_id, firmware_id } = req.params
 
       const user = await Users.findByPk(user_id)
       if (!user) return res.status(401).json({ message: 'Unauthorized!' })
 
-      const firmwares = await Firmwares.findAll({
+      const firmware = await Firmwares.findByPk(firmware_id)
+      if (!firmware) return res.status(401).json({ message: 'Firmware not found!' })
+
+      console.log(firmware)
+      await Firmwares.destroy({
         where: {
-          [filter_by]: {
-            [Sequelize.Op.iLike]: `%${filter}%`,
-          },
+          id: firmware_id,
         },
-        raw: true,
-        order: [['created_at', 'DESC']],
       })
 
-      const data = FirmwaresService.addNameFile(firmwares)
-
       return res.status(200).json({
-        data: data,
+        data: [],
+        message: `The project ${firmware.name_project}, with firmware '${firmware.name_board}', v${firmware.version_major}.${firmware.version_minor}.${firmware.version_patch}, was deleted!`,
       })
     } catch (error) {
       console.log(error)

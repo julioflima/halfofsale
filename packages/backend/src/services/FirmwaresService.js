@@ -1,16 +1,16 @@
 const { getNameFile } = require('../utils/getNameFile')
 
 module.exports = class FirmwaresService {
-  static isHigherVersion(lastData, versionMajor, versionMinor, versionPatch) {
+  static isHigherVersion({ lastData, version_major, version_minor, version_patch }, signal = '>=') {
     const versioning = lastData.length ? lastData[0] : null
 
     if (!versioning) return false
 
     const lastVersion =
       versioning.version_major * 100 + versioning.version_minor * 10 + versioning.version_patch
-    const thisVersion = versionMajor * 100 + versionMinor * 10 + versionPatch
+    const thisVersion = version_major * 100 + version_minor * 10 + version_patch
 
-    const result = lastVersion >= thisVersion
+    const result = signal === '>=' ? lastVersion >= thisVersion : lastVersion > thisVersion
 
     return result
   }
