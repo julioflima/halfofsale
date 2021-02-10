@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Head from 'next/head'
 
 import useTranslation from '../hooks/useTranslation'
 
@@ -23,6 +23,9 @@ export const Background = (props) => {
 
   return (
     <Container>
+      <Head>
+        <title>Platiot</title>
+      </Head>
       <ContainerMain>
         <ContainerLogo>
           <ImagePlatiot />

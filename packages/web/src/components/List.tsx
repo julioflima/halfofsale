@@ -1,5 +1,5 @@
 import Link from 'next/link'
 
 export const List = (props) => {
-  return <></>
+  return <h1 style={{ color: 'black' }}>list</h1>
 }

@@ -3,7 +3,9 @@ import styled, { css } from 'styled-components'
 
 import { IButton } from '../../src/interfaces/components/Navigation'
 
-import { FiHome, FiUsers, FiUser, FiLock, FiShield } from 'react-icons/fi'
+import { GiAstronautHelmet } from 'react-icons/gi'
+import { BiChip } from 'react-icons/bi'
+import { FiGitMerge } from 'react-icons/fi'
 
 import { liquid } from '../animations'
 
@@ -19,7 +21,7 @@ export const ContainerVirtualButtons = styled.span`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  color: ${(props) => props.theme.colors.tertiary.one + '66'} !important;
+  color: #fff;
 `
 
 export const Button = styled.span<IButton>`
@@ -58,25 +60,25 @@ export const Button = styled.span<IButton>`
       : ''};
 ` as React.FC<IButton>
 
-export const IconHome = styled(FiHome)`
+export const IconFirmware = styled(BiChip)`
   height: auto;
-  width: 1rem;
+  width: 2rem;
   z-index: 2;
   margin: auto;
   transform: rotate(-45deg);
 `
 
-export const IconUsers = styled(FiUser)`
+export const IconUser = styled(GiAstronautHelmet)`
   height: auto;
-  width: 1rem;
+  width: 2rem;
   display: inline-block;
   margin: auto;
   z-index: 5;
   transform: rotate(-45deg);
 `
-export const IconTeam = styled(FiUsers)`
+export const IconList = styled(FiGitMerge)`
   height: auto;
-  width: 1rem;
+  width: 2rem;
   display: inline-block;
   margin: auto;
   z-index: 5;

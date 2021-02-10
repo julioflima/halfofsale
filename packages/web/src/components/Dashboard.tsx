@@ -1,21 +1,26 @@
 import useTranslation from '../hooks/useTranslation'
 
 import { Navigation } from './Navigation'
-
 import { Container, Content, Nav } from '../../styles/components/Dashboard'
-import { TDashboard } from '../interfaces/components/TDashboard'
+import { Firmware } from '../components/Firmware'
+import { List } from '../components/List'
+import { User } from '../components/User'
 
-import { routes } from '../routes/routes'
-
-export const Dashboard: React.FC<TDashboard> = ({ component }) => {
+export const Dashboard = ({ statePage }) => {
   const { t } = useTranslation()
   const slogan = t('slogan')
+
+  const [page] = statePage
 
   return (
     <>
       <Container>
-        <Content>{component}</Content>
-        <Navigation />
+        <Content>
+          {page === 'list' && <List />}
+          {page === 'user' && <User />}
+          {page === 'firmware' && <Firmware />}
+        </Content>
+        <Navigation statePage={statePage} />
       </Container>
     </>
   )

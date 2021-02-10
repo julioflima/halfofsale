@@ -4,27 +4,28 @@ import { IButtonsAnimate } from '../../src/interfaces/components/Navigation'
 
 import {
   Button,
-  IconHome,
-  IconUsers,
-  IconTeam,
+  IconFirmware,
+  IconUser,
+  IconList,
   ContainerTab,
   ContainerVirtualButtons,
 } from '../../styles/components/Navigation'
 
-export const Navigation = () => {
+export const Navigation = ({ statePage }) => {
+  const [, setPage] = statePage
+
   const [animate, setAnimate] = useState<IButtonsAnimate>({
-    team: false,
-    home: true,
-    users: false,
+    user: true,
+    firmware: false,
+    list: false,
   })
 
-  useEffect(() => {}, [animate])
-
-  const buttonAnimate = (nameButton) => {
+  const buttonAnimate = (nameButton: string) => {
     if (!animate[nameButton]) {
       setAnimate((state) => {
         const stateFalsies = Object.keys(state).forEach((v) => (state[v] = false))
         const updatedState = { ...(stateFalsies as any), [nameButton]: true }
+        setPage(nameButton)
         return updatedState
       })
     }
@@ -34,14 +35,14 @@ export const Navigation = () => {
     <>
       <ContainerTab>
         <ContainerVirtualButtons>
-          <Button animate={animate.team} onClick={() => buttonAnimate('team')}>
-            <IconTeam />
+          <Button animate={animate.user} onClick={() => buttonAnimate('user')}>
+            <IconUser />
           </Button>
-          <Button animate={animate.home} onClick={() => buttonAnimate('home')}>
-            <IconHome />
+          <Button animate={animate.firmware} onClick={() => buttonAnimate('firmware')}>
+            <IconFirmware />
           </Button>
-          <Button animate={animate.users} onClick={() => buttonAnimate('users')}>
-            <IconUsers />
+          <Button animate={animate.list} onClick={() => buttonAnimate('list')}>
+            <IconList />
           </Button>
         </ContainerVirtualButtons>
       </ContainerTab>

@@ -5,19 +5,16 @@ import { getLocalizationProps, LanguageProvider } from '../../context/LanguageCo
 import { Localization } from '../../translations/types'
 import { Background } from '../../components/Background'
 import { Dashboard } from '../../components/Dashboard'
-import { routes } from '../../routes/routes'
 
 const IndexPage: NextPage<{
   localization: Localization
 }> = ({ localization }) => {
-  const initialPage = routes.sign_in
-
-  const [page, setPage] = useState(initialPage)
+  const statePage = useState('user')
 
   return (
     <LanguageProvider localization={localization}>
       <Background>
-        <Dashboard component={initialPage()} />
+        <Dashboard statePage={statePage} />
       </Background>
     </LanguageProvider>
   )

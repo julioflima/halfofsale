@@ -1,7 +1,7 @@
 export interface IButtonsAnimate {
-  team: boolean
-  home: boolean
-  users: boolean
+  user: boolean
+  firmware: boolean
+  list: boolean
 }
 
 export interface IButton {
