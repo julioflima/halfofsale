@@ -14,10 +14,9 @@ export const Container = styled.div`
 `
 export const Content = styled.div`
   display: flex;
-  align-items: center;
   margin: auto;
   height: 100%;
-
+  align-items: baseline;
   width: 90%;
   z-index: 9999;
 

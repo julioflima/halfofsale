@@ -68,6 +68,9 @@ export const ImageWaveDarkBlue = styled(Wave)`
   position: fixed;
   bottom: -10vh;
   animation: 10s ${wavingForward('-10%', '-10%')} infinite linear;
+  path {
+    fill: ${(props) => props.theme.colors.tertiary.two};
+  }
 `
 
 export const ImageWaveLightBlue = styled(Wave)`
@@ -80,7 +83,7 @@ export const ImageWaveLightBlue = styled(Wave)`
   animation: 10s ${wavingBack('-10%', '-10%')} infinite linear;
 
   path {
-    fill: ${(props) => props.theme.colors.quaternary.one};
+    fill: ${(props) => props.theme.colors.quaternary.two};
   }
 `
 
