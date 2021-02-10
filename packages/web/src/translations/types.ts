@@ -16,6 +16,10 @@ export type Localization = {
   namespace: string
 }
 
+export interface IPagePaths {
+  params: { id: string; lang: Locale }
+}
+
 export function isLocale(tested: string): tested is Locale {
   return locales.some((locale) => locale === tested)
 }
