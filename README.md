@@ -33,16 +33,10 @@ Projeto: https://www.figma.com/file/tLffijQFskMjUcsEAFokKt/Platiot?node-id=0%3A1
 
 ## User Stories:
 
-- Eu, como engenheiro, gostaria de manter (CRUD) _firmware_ com **nome do projeto**,
-  **versão** e **nome da placa compatível**;
-- Eu, como engenheiro, gostaria de ter a garantia que somente usuários
-  autorizados podem fazer upload e download dos arquivos de _firmware_;
-- Eu, como engenheiro, gostaria de **garantir a integridade** do arquivo de firmware, a
-  fim de impedir que alguém não autorizado tenha acesso às informações contidas na
-  imagem (.bin);
-- Eu, como engenheiro, gostaria que ao abrir a plataforma de controle de versão de
-  firmware, o sistema listasse para mim todos os arquivos (.bin ou .zip) por **projeto** e
-  **placa compatível**.
+- Eu, como engenheiro, gostaria de manter (CRUD) _firmware_ com **nome do projeto**, **versão** e **nome da placa compatível**;
+- Eu, como engenheiro, gostaria de ter a garantia que somente usuários autorizados podem fazer upload e download dos arquivos de _firmware_;
+- Eu, como engenheiro, gostaria de **garantir a integridade** do arquivo de firmware, a fim de impedir que alguém não autorizado tenha acesso às informações contidas na imagem (.bin);
+- Eu, como engenheiro, gostaria que ao abrir a plataforma de controle de versão de firmware, o sistema listasse para mim todos os arquivos (.bin ou .zip) por **projeto** e **placa compatível**.
 
 ## Regras de Negócio:
 
