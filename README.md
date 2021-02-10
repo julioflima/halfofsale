@@ -64,31 +64,46 @@ Projeto: https://www.figma.com/file/tLffijQFskMjUcsEAFokKt/Platiot?node-id=0%3A1
 ##### Docker
 
 `sudo docker ps`
+
 `sudo docker stop "hash"`
+
 `sudo docker build -t platiot .`
+
 `docker run -p 3333:3333 -d platiot`
 
 ##### Heroku
 
 `heroku login`
+
 `heroku container:login`
+
 `heroku container:push web -a platiot`
+
 `heroku container:release web -a platiot`
+
+### Frontend
 
 <p align="justify">
   A aplicação frontend encontra-se hospedada na Vercel.
 </p>
+
+### Storage
+
 <p align="justify">
   A aplicação, storage encontra-se hospedada na AWS S3.
 </p>
+
+### Banco de Dados
+
 <p align="justify">
   A aplicação, banco de dados PostgreSQL encontra-se hospedada na ElephantSQL.
 </p>
-<p align="justify">
-O projeto foi inicialmente pensado como "monorepo", houve alguns conflitos, na hospedagem do Heroku (nada que com mais tempo não pudesse ser resolvido). Desse modo fora criado esse repositório para unificar os diretórios e os diretórios backend e frontend foram dividos em outros dois repositórios. Segue abaixo os respectivos links:
-</p>
 
 ## Repository:
+
+<p align="justify">
+O projeto foi inicialmente pensado como "monorepo". Desse modo fora criado esse repositório para unificar os diretórios e os diretórios backend e frontend foram dividos em outros dois repositórios.
+</p>
 
 Link Repositório Backend e Frontend: https://github.com/julioflima/platiot
 
