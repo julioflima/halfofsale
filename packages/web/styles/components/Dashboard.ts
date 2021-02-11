@@ -2,10 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  margin: 10vh;
+  z-index: 99999999999;
+  margin-top: 10vh;
   margin-bottom: 25vh;
   height: auto;
-  width: 50%;
+  width: 45vw;
   display: flex;
   flex-direction: row;
   box-shadow: 4px 4px 20px 3px rgb(37 134 255 / 33%);

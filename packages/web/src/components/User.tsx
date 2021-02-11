@@ -1,7 +1,6 @@
 import { Admin } from './Admin'
-import { SignUp } from './SignUp'
-import { SignIn } from './SignIn'
+import { Sign } from './Sign'
 
 export const User = () => {
-  return <SignIn />
+  return <Sign />
 }

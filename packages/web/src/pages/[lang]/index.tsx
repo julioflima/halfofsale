@@ -5,6 +5,7 @@ import { getLocalizationProps, LanguageProvider } from '../../context/LanguageCo
 import { Localization } from '../../translations/types'
 import { Background } from '../../components/Background'
 import { Dashboard } from '../../components/Dashboard'
+import { locales } from '../../translations/config'
 
 const IndexPage: NextPage<{
   localization: Localization
@@ -31,7 +32,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   return {
-    paths: ['en', 'pt'].map((lang) => ({ params: { lang } })),
+    paths: locales.map((lang) => ({ params: { lang } })),
     fallback: false,
   }
 }

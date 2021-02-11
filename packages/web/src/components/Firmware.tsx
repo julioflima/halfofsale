@@ -11,12 +11,14 @@ export const Firmware = () => {
         <input type="text" placeholder={'Compatible board name.'} />
       </TextContainer>
       <VersionContainer>
-        <span>v.</span>
-        <input type="number" min="0" />
+        <span>
+          <span>v</span>
+        </span>
+        <input placeholder={'0'} type="number" min="0" />
         <span>.</span>
-        <input type="number" min="0" />
+        <input placeholder={'0'} type="number" min="0" />
         <span>.</span>
-        <input type="number" min="0" />
+        <input placeholder={'0'} type="number" min="0" />
       </VersionContainer>
       {/* <Dropzone accept={'application/octet-stream, application/zip'} onDropAccepted={() => {}} /> */}
       <Upload />

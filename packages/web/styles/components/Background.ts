@@ -29,7 +29,7 @@ export const ContainerMain = styled(ImageMarine)`
 `
 
 export const ContainerLogo = styled.div`
-  width: 50%;
+  width: 50vw;
   display: flex;
   flex-direction: column;
   align-items: center;
