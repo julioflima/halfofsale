@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
-import { FiEdit3, FiDownloadCloud, FiTrash, FiFilter } from 'react-icons/fi'
+import { FiArrowLeft } from 'react-icons/fi'
+import { GiAstronautHelmet } from 'react-icons/gi'
 
 export const Container = styled.div`
   width: 100vw;
@@ -19,6 +20,11 @@ export const Container = styled.div`
     border-radius: 5rem;
     padding: 0.7rem;
     width: 100%;
+  }
+
+  & + span {
+    position: relative;
+    width: 0;
   }
 `
 
@@ -79,11 +85,8 @@ export const TableContainer = styled.div`
     min-width: 8rem;
   }
 
-  & th:nth-child(n + 2) {
-    width: fit-content;
-  }
   & td:nth-child(3) {
-    text-align: center;
+    text-align: end;
   }
 
   & td {
@@ -95,68 +98,11 @@ export const TableContainer = styled.div`
   }
 `
 
-export const FiltersContainer = styled.div`
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: row;
-  width: 100%;
-`
-
-export const ButtonsFilters = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  flex-direction: column;
-  height: 100%;
-
-  & button {
-    width: 2rem;
-    height: 2rem;
-    border: 1px solid ${(props) => props.theme.colors.secondary.one};
-    border-radius: 50%;
-    background-color: transparent;
-    color: ${(props) => props.theme.colors.secondary.one};
-    outline: none;
-    cursor: pointer;
-    outline: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-right: 1.3rem;
-  }
-
-  & button:hover {
-    border: 1px solid ${(props) => props.theme.colors.quinary.one};
-    transform: scale(1.1);
-  }
-
-  & button:hover svg {
-    color: ${(props) => props.theme.colors.quinary.one};
-  }
-`
-
-export const IconEdit = styled(FiEdit3)`
+export const IconAdmin = styled(GiAstronautHelmet)`
   height: auto;
   width: 1rem;
   display: inline-block;
-  margin: 0 1rem;
-  margin-right: 0;
-  cursor: pointer;
-
-  z-index: 5;
-
-  & :hover {
-    color: ${(props) => props.theme.colors.secondary.one};
-    transform: scale(1.3);
-  }
-`
-export const IconDownload = styled(FiDownloadCloud)`
-  height: auto;
-  width: 1rem;
-  display: inline-block;
-  margin: 0 0.5rem;
+  margin-left: 1rem;
   z-index: 5;
   cursor: pointer;
   & :hover {
@@ -165,25 +111,18 @@ export const IconDownload = styled(FiDownloadCloud)`
   }
 `
 
-export const IconDelete = styled(FiTrash)`
-  height: auto;
-  width: 1rem;
+export const IconBack = styled(FiArrowLeft)`
   display: inline-block;
+  margin-left: 1rem;
   z-index: 5;
   cursor: pointer;
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.colors.primary.one};
+  position: absolute;
+  left: 0rem;
+
   & :hover {
     color: ${(props) => props.theme.colors.primary.one};
     transform: scale(1.3);
-  }
-`
-
-export const IconFilter = styled(FiFilter)`
-  font-size: 1.2rem;
-  display: inline-block;
-  padding-top: 0.2rem;
-  color: ${(props) => props.theme.colors.secondary.one};
-  z-index: 88888;
-  & :hover {
-    color: white;
   }
 `

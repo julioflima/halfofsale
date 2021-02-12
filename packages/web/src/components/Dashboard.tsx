@@ -12,13 +12,19 @@ export const Dashboard = ({ statePage }) => {
 
   const [page] = statePage
 
+  const routes = {
+    list: List,
+    user: User,
+    firmware: Firmware,
+  }
+
+  const Screen = routes[page]
+
   return (
     <>
       <Container>
         <Content>
-          {page === 'list' && <List />}
-          {page === 'user' && <User />}
-          {page === 'firmware' && <Firmware />}
+          <Screen />
         </Content>
         <Navigation statePage={statePage} />
       </Container>

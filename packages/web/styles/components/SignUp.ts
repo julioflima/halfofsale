@@ -1,5 +1,7 @@
 import styled from 'styled-components'
 
+import { FiArrowLeft } from 'react-icons/fi'
+
 export const Container = styled.div`
   width: 100vw;
   overflow: hidden;
@@ -35,7 +37,7 @@ export const Container = styled.div`
     color: white;
     border: none;
     border-radius: 5rem;
-    z-index: 9999999999999999999;
+    z-index: 999;
     margin: 2rem 0;
     cursor: pointer;
   }
@@ -47,6 +49,11 @@ export const Container = styled.div`
       ${(props) => props.theme.colors.secondary.one + 'e0'} 100%
     );
     transform: scale(1.02);
+  }
+
+  & + span {
+    position: relative;
+    width: 0;
   }
 `
 
@@ -86,21 +93,18 @@ export const TextContainer = styled.div`
     border-bottom-left-radius: 0.5rem;
   }
 `
-export const TextNotHaveAccout = styled.div`
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  margin: 0 5rem;
-  margin-bottom: 2rem;
-  padding: 0 6rem;
+export const IconBack = styled(FiArrowLeft)`
+  display: inline-block;
+  margin-left: 1rem;
+  z-index: 5;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: ${(props) => props.theme.colors.primary.one};
+  position: absolute;
+  left: 0rem;
 
-  & span {
-    font-size: 0.8rem;
-    color: ${(props) => props.theme.colors.tertiary.one};
-  }
-
-  & span:nth-child(2) {
-    font-weight: 600;
+  & :hover {
     color: ${(props) => props.theme.colors.primary.one};
+    transform: scale(1.3);
   }
 `
