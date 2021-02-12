@@ -1,9 +1,10 @@
 import styled from 'styled-components'
 
+import { FiEdit3, FiDownloadCloud, FiTrash, FiFilter } from 'react-icons/fi'
+
 export const Container = styled.div`
   width: 100vw;
-  overflow: hidden;
-  margin: 0 5rem;
+  margin: 0 3rem;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -50,15 +51,46 @@ export const TextContainer = styled.div`
 
 export const TableContainer = styled.div`
   width: 100%;
+  overflow: auto;
+  height: 85%;
+  margin-top: 1rem;
+
   & table {
     width: 100%;
   }
 
+  & tr {
+    margin: 0 2rem;
+    padding: 0 2rem;
+    height: 1.7rem;
+  }
+
   & th {
-    color: ${(props) => props.theme.colors.tertiary.three};
+    font-size: 14px;
+    text-align: left;
+    position: sticky;
+    margin-right: 1rem;
+    top: 0;
+    background-color: white;
+    color: ${(props) => props.theme.colors.tertiary.two};
+  }
+
+  & th:nth-child(-n + 2) {
+    min-width: 8rem;
+  }
+
+  & th:nth-child(n + 2) {
+    width: fit-content;
+  }
+  & td:nth-child(3) {
+    text-align: center;
   }
 
   & td {
+    height: 2rem;
+    width: fit-content;
+    margin-right: 2rem;
+    font-size: 12px;
     color: ${(props) => props.theme.colors.tertiary.three};
   }
 `
@@ -73,7 +105,6 @@ export const FiltersContainer = styled.div`
 `
 
 export const ButtonsFilters = styled.div`
-  padding: 1rem 0;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -90,13 +121,69 @@ export const ButtonsFilters = styled.div`
     outline: none;
     cursor: pointer;
     outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.3rem;
   }
 
   & button:hover {
-    background: linear-gradient(
-      225deg,
-      ${(props) => props.theme.colors.primary.one + 'e0'} 0%,
-      ${(props) => props.theme.colors.secondary.one + 'e0'} 100%
-    );
+    border: 1px solid ${(props) => props.theme.colors.quinary.one};
+    transform: scale(1.2);
+  }
+
+  & button:hover svg {
+    color: ${(props) => props.theme.colors.quinary.one};
+  }
+`
+
+export const IconEdit = styled(FiEdit3)`
+  height: auto;
+  width: 1rem;
+  display: inline-block;
+  margin: 0 1rem;
+  margin-right: 0;
+  cursor: pointer;
+
+  z-index: 5;
+
+  & :hover {
+    color: ${(props) => props.theme.colors.secondary.one};
+    transform: scale(1.3);
+  }
+`
+export const IconDownload = styled(FiDownloadCloud)`
+  height: auto;
+  width: 1rem;
+  display: inline-block;
+  margin: 0 0.5rem;
+  z-index: 5;
+  cursor: pointer;
+  & :hover {
+    color: ${(props) => props.theme.colors.quinary.one};
+    transform: scale(1.3);
+  }
+`
+
+export const IconDelete = styled(FiTrash)`
+  height: auto;
+  width: 1rem;
+  display: inline-block;
+  z-index: 5;
+  cursor: pointer;
+  & :hover {
+    color: ${(props) => props.theme.colors.primary.one};
+    transform: scale(1.3);
+  }
+`
+
+export const IconFilter = styled(FiFilter)`
+  font-size: 1.2rem;
+  display: inline-block;
+  padding-top: 0.2rem;
+  color: ${(props) => props.theme.colors.secondary.one};
+  z-index: 88888;
+  & :hover {
+    color: white;
   }
 `

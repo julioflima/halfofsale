@@ -6,7 +6,7 @@ import { ReactComponent as IA } from '../../src/assets/svg/iaa.svg'
 export const Container = styled.div`
   width: 100vw;
   overflow: hidden;
-  margin: 0 5rem;
+  margin: 0 3rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,7 +85,7 @@ export const VersionContainer = styled.div`
   align-items: flex-end;
   width: 100%;
   position: relative;
-  justify-content: center;
+  justify-content: space-between;
 
   & input {
     outline: none;

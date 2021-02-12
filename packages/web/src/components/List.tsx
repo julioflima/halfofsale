@@ -4,6 +4,10 @@ import {
   Container,
   TextContainer,
   ButtonsFilters,
+  IconFilter,
+  IconEdit,
+  IconDownload,
+  IconDelete,
 } from '../../styles/components/List'
 
 export const List = () => {
@@ -16,8 +20,12 @@ export const List = () => {
           <input type="text" placeholder={'Search by compatible board.'} />
         </TextContainer>
         <ButtonsFilters>
-          <button></button>
-          <button></button>
+          <button>
+            <IconFilter />
+          </button>
+          <button>
+            <IconFilter />
+          </button>
         </ButtonsFilters>
       </FiltersContainer>
 
@@ -25,18 +33,364 @@ export const List = () => {
         <table>
           <thead>
             <tr>
-              <th>Col1</th>
-              <th>Col2</th>
-              <th>Col3</th>
+              <th>Name project</th>
+              <th>Compatible Board</th>
+              <th>Version</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
+              <th>&nbsp;</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>info</td>
-              <td>info</td>
-              <td>info</td>
-              <td>info</td>
-              <td>info</td>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
+            </tr>
+            <tr>
+              <td>Automotive GPS to Motocycles Kwawazki no gol not walvagens</td>
+              <td>PIC18F4520</td>
+              <td>v1.8.23</td>
+              <td>
+                <IconEdit />
+              </td>
+              <td>
+                <IconDownload />
+              </td>
+              <td>
+                <IconDelete />
+              </td>
             </tr>
           </tbody>
         </table>

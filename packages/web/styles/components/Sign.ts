@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div`
   width: 100vw;
   overflow: hidden;
-  margin: 0 5rem;
+  margin: 0 3rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -52,6 +52,7 @@ export const Container = styled.div`
 
 export const TextContainer = styled.div`
   width: 100%;
+  padding: 0 6rem;
 
   & input {
     margin: 1rem 0;
@@ -89,7 +90,9 @@ export const TextNotHaveAccout = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin: 0 5rem;
   margin-bottom: 2rem;
+  padding: 0 6rem;
 
   & span {
     font-size: 0.8rem;

@@ -3,7 +3,7 @@ import styled, { css } from 'styled-components'
 
 import { IButton } from '../../src/interfaces/components/Navigation'
 
-import { GiAstronautHelmet } from 'react-icons/gi'
+import { FaUserAstronaut } from 'react-icons/fa'
 import { BiChip } from 'react-icons/bi'
 import { FiGitMerge } from 'react-icons/fi'
 
@@ -68,7 +68,7 @@ export const IconFirmware = styled(BiChip)`
   transform: rotate(-45deg);
 `
 
-export const IconUser = styled(GiAstronautHelmet)`
+export const IconUser = styled(FaUserAstronaut)`
   height: auto;
   width: 2rem;
   display: inline-block;
