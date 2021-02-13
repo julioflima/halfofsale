@@ -1,4 +1,3 @@
-
 FROM node:12
 
 LABEL version="1.0.0" description="Platiot" maintainer="Julio Lima<julio_flima@hotmail.com>"
