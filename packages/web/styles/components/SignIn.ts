@@ -35,7 +35,7 @@ export const Container = styled.div`
     color: white;
     border: none;
     border-radius: 5rem;
-    z-index: 9999999999999999999;
+    z-index: 999;
     margin: 2rem 0;
     cursor: pointer;
   }

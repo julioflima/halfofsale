@@ -47,6 +47,7 @@ jspm_packages/
 # Yarn
 ./yarn.lock
 **/yarn.lock
+**/yarn/**
 **/yarn-debug.log*
 **/yarn-error.log*
 

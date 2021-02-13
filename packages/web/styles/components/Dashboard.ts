@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  z-index: 99999999999;
+  z-index: 999;
   margin-top: 10vh;
   margin-bottom: 25vh;
   height: auto;
