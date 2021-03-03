@@ -57,6 +57,7 @@ export const TableContainer = styled.div`
 
   & table {
     width: 100%;
+    border-collapse: collapse;
   }
 
   & tr {
@@ -88,10 +89,14 @@ export const TableContainer = styled.div`
 
   & td {
     height: 2rem;
-    width: fit-content;
+    width: 100%;
     margin-right: 2rem;
     font-size: 12px;
     color: ${(props) => props.theme.colors.tertiary.three};
+  }
+
+  & tbody tr:hover {
+    background: #ffff0480;
   }
 `
 
@@ -148,7 +153,7 @@ export const IconEdit = styled(FiEdit3)`
   z-index: 5;
 
   & :hover {
-    color: ${(props) => props.theme.colors.secondary.one};
+    color: ${(props) => props.theme.colors.sextary.one};
     transform: scale(1.3);
   }
 `

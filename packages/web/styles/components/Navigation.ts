@@ -39,8 +39,8 @@ export const Button = styled.span<IButton>`
   box-shadow: ${(props) =>
     props.animate
       ? css`
-          4px 4px 10px ${(props) => props.theme.colors.secondary.three + '33'},
-          -4px -4px 10px ${(props) => props.theme.colors.primary.one + '66'};
+          4px 4px 10px ${(props) => props.theme.colors.secondary.one + '33'},
+          -4px -4px 10px ${(props) => props.theme.colors.primary.one + '33'};
         `
       : ''};
   background: ${(props) =>
