@@ -2,7 +2,7 @@
   "name": "halfofsale",
   "version": "2.0.0",
   "main": "index.js",
-  "repository": "https://github.com/juliofliam/halfofsale.git",
+  "repository": "https://github.com/juioflima/halfofsale.git",
   "author": "Julio Lima",
   "scripts": {
     "build": "yarn workspaces foreach run build",
