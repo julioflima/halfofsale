@@ -2,7 +2,6 @@ const express = require('express')
 
 const HousesController = require('../controllers/HousesController')
 
-
 module.exports = class Routes {
   constructor() {
     this.routes = express.Router()
@@ -16,6 +15,6 @@ module.exports = class Routes {
   }
 
   map() {
-    this.routes.get('/users',  HousesController.index)
+    this.routes.get('/', HousesController.index)
   }
 }
