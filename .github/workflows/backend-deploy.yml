@@ -1,12 +1,13 @@
 # Design pattern referece: https://github.com/MelisseCabral/TrelloClone/blob/master/.github/workflows/server-deploy.yml
 
-name: 'Deploy Backend Platiot on Heroku'
+name: 'Deploy Backend Development on Heroku'
 on:
   push:
     branches:
-      - master
+      - main
     paths:
       - 'packages/backend/**'
+      - '.github/workflows/**'
 jobs:
   backend-deploy:
     runs-on: ubuntu-latest
@@ -21,16 +22,16 @@ jobs:
 
       - name: Build docker image
         working-directory: packages/backend
-        run: sudo docker build -t platiot .
+        run: sudo docker build -t halfofsale-api .
 
       - name: Push container to docker registry heroku
         working-directory: packages/backend
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:push -a platiot web
+        run: heroku container:push -a halfofsale-api web
 
       - name: Release backend in Heroku
         working-directory: packages/backend
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:release -a platiot web
+        run: heroku container:release -a halfofsale-api web
