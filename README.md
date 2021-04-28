@@ -1,4 +1,4 @@
-<p align="center">	
+<p align="center">
 	<h1 align="center">
     <span>⚓ Platiot 🚀</span>
   </h1>
@@ -49,7 +49,7 @@ Projeto: https://www.figma.com/file/tLffijQFskMjUcsEAFokKt/Platiot?node-id=0%3A1
 ### Backend
 
 <p align="justify">
-  A aplicação backend encontra-se hospedada no Heroku.
+  The application is hosted on Heroku.
 </p>
 
 ##### Docker
@@ -84,12 +84,6 @@ Projeto: https://www.figma.com/file/tLffijQFskMjUcsEAFokKt/Platiot?node-id=0%3A1
   A aplicação, storage encontra-se hospedada na AWS S3.
 </p>
 
-### Banco de Dados
-
-<p align="justify">
-  A aplicação, banco de dados PostgreSQL encontra-se hospedada na ElephantSQL.
-</p>
-
 ## Repository:
 
 <p align="justify">
@@ -110,16 +104,6 @@ Link Frontend: https://platiot.vercel.app/
 Na aplicação não fora utilizado scripts SQL puros, e sim uma tecnologia chamada Query Builder que possibilita por meio de código em JS, fazer uma chamada a scripts de maneira mais natural. A principal vantagem do Query Builder, é na verdade a portabilidade para qualquer banco de dados em SQL, seja ele, Oracle, MySQL ou PostgreSQL. O Query Builder, utilizado fora o Sequelize. Segue abaixo uma breve comparação entre as duas tecnologias:
 </p>
 
-Driver: `SELECT * FROM users`
-
-Query Builder: `table('users').select('*').where()`
-
-## Banco de Dados:
-
-Fora utilizado o como banco de dados o PostgreSQL.
-
-Ele está hospedado na plataforma [Elephathy](https://www.elephantsql.com/), já que destinado para testes, ele possui 20mb gratuitos.
-
 ## Front End
 
 <p align="justify">
@@ -131,21 +115,7 @@ A aplicação fora desenvolvida em React, visando uma utilização em um computa
 <p align="justify">
 Acreditando que há uma forte tendência de aplicaçes em Next, sevivo a uma série de tecnologias que garatem performace como o SSG (Static Site Generetion)... Portanto Next fora bastante utilizado, para gerar páginas dinâmicas, sendo elas pre-renderizadas no build.
 <p align="justify">
-  
-### Tradução:
-<p align="justify">
-O usuário final da aplicação será um engenheiro que possui como língua de trabalho o inglês, em muitos deles o seu computador está configurado em inglês e sendo um projeto em inglês poderão haver estrangeiros trabalhando no projeto sem nenhuma familiaridade com o português.
-<p align="justify">
-<p align="justify">
-Com esse propsito fora utilizada uma biblioteca em next de modo a prover traduções do site, gerada automaticamente durante o processo de build. Cada página será gerada em duas línguas, PT e EN.
-<p align="justify">
-<p align="justify">
-A grande dificuldade aqui fora implementar em Next, a referência utilizada havia muitos erros de Typescript, todos eles corrigidos e enviados PR para o projeto original.
-<p align="justify">
-<p align="justify">
-  Seguem abaixo os links utilizados:
-<p align="justify">
-  
+
 - [Repositório Original;](https://github.com/BiscuiTech/i18n-typescript-app)
 - [I - Pull Request;](https://github.com/BiscuiTech/i18n-typescript-app/pull/2)
 - [II - Pull Request;](https://github.com/BiscuiTech/i18n-typescript-app/pull/4)
