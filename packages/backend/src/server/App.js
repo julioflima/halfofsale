@@ -1,6 +1,5 @@
 const express = require('express')
 const cors = require('cors')
-const { errors } = require('celebrate')
 
 module.exports = class App {
   constructor(routes) {
@@ -16,7 +15,6 @@ module.exports = class App {
       // origin: ''
     )
     this.server.use(express.json())
-    this.server.use(errors())
     this.server.use(express.urlencoded({ extended: true }))
   }
 
