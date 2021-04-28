@@ -1,6 +1,6 @@
 FROM node:12
 
-LABEL version="1.0.0" description="Platiot" maintainer="Julio Lima<julio_flima@hotmail.com>"
+LABEL version="1.0.0" description="Half of Sale" maintainer="Julio Lima<julio_flima@hotmail.com>"
 
 WORKDIR /usr/app
 
