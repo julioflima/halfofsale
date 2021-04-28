@@ -22,16 +22,16 @@ jobs:
 
       - name: Build docker image
         working-directory: packages/frontend
-        run: sudo docker build -t halofsale .
+        run: sudo docker build -t halfofsale .
 
       - name: Push container to docker registry heroku
         working-directory: packages/frontend
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:push -a halofsale web
+        run: heroku container:push -a halfofsale web
 
       - name: Release frontend in Heroku
         working-directory: packages/frontend
         env:
           HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
-        run: heroku container:release -a halofsale web
+        run: heroku container:release -a halfofsale web
