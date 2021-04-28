@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "description": "Firmware Versioning System",
+  "description": "Houses for sale.",
   "main": "index.js",
   "name": "@halfofsale/backend",
   "private": "true",

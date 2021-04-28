@@ -1,5 +1,5 @@
 {
-  "name": "@platiot/eslint-config",
+  "name": "@halfofsale/eslint-config",
   "version": "1.0.0",
   "main": ".eslintrc.js",
   "license": "MIT",

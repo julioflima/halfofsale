@@ -1,5 +1,6 @@
 {
-  "name": "my-app",
+  "description": "Houses for sale.",
+  "name": "@halfofsale/frontend",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
