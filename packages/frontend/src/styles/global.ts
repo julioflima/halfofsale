@@ -20,7 +20,7 @@ export default createGlobalStyle`
 
     ::-webkit-scrollbar-thumb {
       border-radius: 10px;
-      background-color: ${(props) => props.theme.colors.tertiary.seven};
+      background-color: ${(props) => props.theme.colors.tertiary.four};
       background-image: -webkit-gradient(
         linear,
         0 0,
@@ -81,11 +81,5 @@ code {
 }
 
 #root{
-  background: ${(props) => props.theme.colors.primary.one};
-  overflow-y: hidden;
-  min-height: 100%;
-  display: flex;
-  flex: 1;
-  position: absolute;
 }
 `

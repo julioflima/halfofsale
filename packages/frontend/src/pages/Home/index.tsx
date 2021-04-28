@@ -1,11 +1,12 @@
 import React, { memo } from 'react'
 
-import { ContainerLoading } from './styles'
+import Header from '../../components/Header'
 
 const Home: React.FC = () => {
   return (
     <>
-      <ContainerLoading />
+      <Header />
+      <div>content</div>
     </>
   )
 }
