@@ -1,5 +1,3 @@
-# Design pattern referece: https://github.com/MelisseCabral/TrelloClone/blob/master/.github/workflows/server-deploy.yml
-
 name: 'Deploy Backend Development on Heroku'
 on:
   push:

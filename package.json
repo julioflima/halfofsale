@@ -1,8 +1,8 @@
 {
-  "name": "platiot",
+  "name": "halfofsale",
   "version": "2.0.0",
   "main": "index.js",
-  "repository": "https://github.com/juliofliam/Platiot.git",
+  "repository": "https://github.com/juliofliam/halfofsale.git",
   "author": "Julio Lima",
   "scripts": {
     "build": "yarn workspaces foreach run build",
@@ -15,7 +15,7 @@
     ]
   },
   "devDependencies": {
-    "@platiot/eslint-config": "*",
+    "@halfofsale/eslint-config": "*",
     "@types/node": "^14.14.20",
     "@types/react": "^17.0.0",
     "nodemon": "^2.0.4",
